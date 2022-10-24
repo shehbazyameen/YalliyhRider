@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-YalliyhRider-YalliyhRiderTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-YalliyhRider-YalliyhRiderTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		80634EBF9F27411FA2BD1358 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 122D507B57F24E118080946E /* index.js */; };
+		636467F701264228A9C0D4FF /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC7203B869064BD992990ADE /* Dongle-Bold.ttf */; };
+		849BB5987A3142DF8D1E1FAA /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BACBBE2EAB34C6F9420DE53 /* Dongle-Light.ttf */; };
+		EBCF5F6372B944F4901813C7 /* Dongle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 021128AB4721451FBB988082 /* Dongle-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = YalliyhRider/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-YalliyhRider-YalliyhRiderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YalliyhRider-YalliyhRiderTests.release.xcconfig"; path = "Target Support Files/Pods-YalliyhRider-YalliyhRiderTests/Pods-YalliyhRider-YalliyhRiderTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		122D507B57F24E118080946E /* index.js */ = {isa = PBXFileReference; name = "index.js"; path = "../src/assets/fonts/index.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DC7203B869064BD992990ADE /* Dongle-Bold.ttf */ = {isa = PBXFileReference; name = "Dongle-Bold.ttf"; path = "../src/assets/fonts/Dongle-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5BACBBE2EAB34C6F9420DE53 /* Dongle-Light.ttf */ = {isa = PBXFileReference; name = "Dongle-Light.ttf"; path = "../src/assets/fonts/Dongle-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		021128AB4721451FBB988082 /* Dongle-Regular.ttf */ = {isa = PBXFileReference; name = "Dongle-Regular.ttf"; path = "../src/assets/fonts/Dongle-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				1060A120BEB9468E9D9521FB /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +156,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		1060A120BEB9468E9D9521FB /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				122D507B57F24E118080946E /* index.js */,
+				DC7203B869064BD992990ADE /* Dongle-Bold.ttf */,
+				5BACBBE2EAB34C6F9420DE53 /* Dongle-Light.ttf */,
+				021128AB4721451FBB988082 /* Dongle-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,10 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				80634EBF9F27411FA2BD1358 /* index.js in Resources */,
+				636467F701264228A9C0D4FF /* Dongle-Bold.ttf in Resources */,
+				849BB5987A3142DF8D1E1FAA /* Dongle-Light.ttf in Resources */,
+				EBCF5F6372B944F4901813C7 /* Dongle-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
