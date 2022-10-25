@@ -8,6 +8,7 @@ const Home = () => {
     <View style={[styling.Container]}>
       <InputFeild
         // refValueCurrent={refenterpassword}
+        onFocusBorderColor={true}
         textLabels={'UserName * '}
         returnKeyType={'next'}
         paddingHorizontal={0}

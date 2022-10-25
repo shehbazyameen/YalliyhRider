@@ -37,6 +37,7 @@ export const InputFeild = ({
   paddingHorizontal = 22,
   paddingHorizontalRight = 0,
   textLabels = textLabels,
+  onFocusBorderColor = false,
 }) => {
   return (
     <View>
@@ -70,7 +71,6 @@ export const InputFeild = ({
             activeOpacity={0.9}
             onPress={() => rightIconOnPress()}>
             <Image
-              // style={[styles.height_width(22, 22)]}
               style={{paddingHorizontal: paddingHorizontalRight}}
               source={rightIcon}
               resizeMode={'contain'}
@@ -78,8 +78,12 @@ export const InputFeild = ({
           </TouchableOpacity>
         }
         inputContainerStyle={[
-          styles.borderBottomWidth,
-          {backgroundColor: bg, height: height, borderRadius: 14},
+          onFocusBorderColor && styles.borderWidth,
+          {
+            backgroundColor: bg,
+            height: height,
+            borderRadius: 14,
+          },
         ]}
         value={value}
         placeholder={placeholder}
@@ -91,6 +95,7 @@ export const InputFeild = ({
         keyboardType={keyboardType}
         maxLength={maxLength}
         containerStyle={[
+          onFocusBorderColor && styles.borderWidth,
           styles.inputFeildStyle,
           {
             height: height,
@@ -114,34 +119,25 @@ export const InputFeild = ({
 };
 
 const styles = StyleSheet.create({
+  borderWidth: {
+    borderWidth: 1,
+    borderColor: colors.borderInputField,
+  },
+
   searchIconInInputField: {
     position: 'absolute',
     borderRadius: 14,
-    // right: 18,
   },
   textInput: {
     fontFamily: fonts.PoppinsLight,
     fontSize: 14,
-    // color: 'red',
   },
   inputFeildStyle: {
     alignItems: 'center',
     borderRadius: 14,
-    backgroundColor: 'red',
-  },
-  shadow: {
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
   },
   borderBottomWidth: {
-    borderBottomWidth: 0,
-    alignSelf: 'center',
-    backgroundColor: 'red',
+    borderBottomWidth: 1,
+    borderColor: colors.borderInputField,
   },
 });
