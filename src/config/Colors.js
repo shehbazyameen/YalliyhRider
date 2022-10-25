@@ -4,5 +4,7 @@ export const colors = {
   primaryColor85: '#000024',
   primaryOrangeColor: '#E78901',
   colorWhite: '#FFFFFF',
+  black: 'black',
+  bordergray: '#EFEFEF',
   ///
 };

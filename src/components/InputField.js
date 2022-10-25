@@ -88,12 +88,20 @@ export const InputFeild = ({
           </TouchableOpacity>
         }
         inputContainerStyle={[
-          onFocusBorderColor && styles.borderWidth,
           {
             backgroundColor: bg,
             height: height,
             borderRadius: 14,
           },
+          onFocusBorderColor
+            ? {
+                borderWidth: 1,
+                borderColor: colors.borderInputField,
+              }
+            : {
+                borderWidth: 1,
+                borderColor: colors.bordergray,
+              },
         ]}
         value={value}
         placeholder={placeholder}
@@ -125,11 +133,6 @@ export const InputFeild = ({
 };
 
 const styles = StyleSheet.create({
-  borderWidth: {
-    borderWidth: 1,
-    borderColor: colors.borderInputField,
-  },
-
   textInput: {
     fontFamily: fonts.PoppinsLight,
     fontSize: 14,
@@ -139,7 +142,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
   },
   borderBottomWidth: {
-    borderBottomWidth: 1,
+    borderBottomWidth: 0,
     borderColor: colors.borderInputField,
   },
 });

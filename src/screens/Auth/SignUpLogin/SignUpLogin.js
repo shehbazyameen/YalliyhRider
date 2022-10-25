@@ -54,7 +54,7 @@ const SignUpLogin = ({navigation}) => {
           </View>
           <InputFeild
             // refValueCurrent={refenterpassword}
-            onFocusBorderColor={true}
+            // onFocusBorderColor={true}
             textLabels={'Full Name*'}
             returnKeyType={'next'}
             paddingHorizontal={0}
