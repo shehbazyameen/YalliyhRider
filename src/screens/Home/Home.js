@@ -9,7 +9,7 @@ const Home = () => {
       <InputFeild
         // refValueCurrent={refenterpassword}
         onFocusBorderColor={true}
-        textLabels={'UserName * '}
+        textLabels={'UserName* '}
         returnKeyType={'next'}
         paddingHorizontal={0}
         paddingHorizontalRight={22}
