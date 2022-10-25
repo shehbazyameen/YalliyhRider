@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import {View, Text, TouchableOpacity, ImageBackground} from 'react-native';
 import styling from './Styling';
-import {Assets} from '../../assets';
+import {Assets} from '../../../assets';
 import {Image} from 'react-native';
 import {StatusBar} from 'react-native';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('HomeStack');
+      navigation.navigate('SignUpLogin');
     }, 1000);
   });
 

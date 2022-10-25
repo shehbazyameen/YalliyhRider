@@ -60,9 +60,15 @@ export const InputFeild = ({
         leftIcon={
           <>
             <Image
-              style={styles.searchIconInInputField}
+              style={[
+                {
+                  height: 12,
+                  width: 12,
+                  marginLeft: 12,
+                },
+              ]}
               source={leftIcon}
-              resizeMode="contain"
+              resizeMode={'contain'}
             />
           </>
         }
@@ -71,7 +77,11 @@ export const InputFeild = ({
             activeOpacity={0.9}
             onPress={() => rightIconOnPress()}>
             <Image
-              style={{paddingHorizontal: paddingHorizontalRight}}
+              style={{
+                paddingHorizontal: paddingHorizontalRight,
+                height: 12,
+                width: 12,
+              }}
               source={rightIcon}
               resizeMode={'contain'}
             />
@@ -103,11 +113,7 @@ export const InputFeild = ({
             paddingHorizontal: paddingHorizontal,
           },
         ]}
-        inputStyle={[
-          styles.textInput,
-          // leftIcon && styles.mL(22),
-          {marginLeft: 12, color: 'black'},
-        ]}
+        inputStyle={[styles.textInput, {marginLeft: 4, color: 'black'}]}
         onSubmitEditing={() =>
           refValueCurrent ? refValueCurrent.current.focus() : ''
         }
@@ -124,10 +130,6 @@ const styles = StyleSheet.create({
     borderColor: colors.borderInputField,
   },
 
-  searchIconInInputField: {
-    position: 'absolute',
-    borderRadius: 14,
-  },
   textInput: {
     fontFamily: fonts.PoppinsLight,
     fontSize: 14,
