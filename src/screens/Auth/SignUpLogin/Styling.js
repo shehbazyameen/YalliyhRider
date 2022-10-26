@@ -1,5 +1,8 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
+import fonts from '../../../assets/fonts';
 import {colors} from '../../../config/Colors';
+
+const {height, width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   Container: {
@@ -27,4 +30,43 @@ export default StyleSheet.create({
     padding: 22,
   },
   marginTop: {marginTop: 16},
+  viewTaber: {
+    paddingHorizontal: 7,
+    paddingVertical: 6,
+    backgroundColor: '#E0E0E066',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderRadius: 10,
+    width: width / 2,
+  },
+  viewMainTab: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  touch: {
+    flexDirection: 'row',
+    marginTop: 5,
+    alignSelf: 'center',
+  },
+  textAlready: {
+    fontSize: 18,
+    fontFamily: fonts.DongleRegular,
+    color: colors.grayLight,
+  },
+  textAlreadyLogin: {
+    fontSize: 18,
+    fontFamily: fonts.DongleRegular,
+    color: colors.textColorLogin,
+    textDecorationLine: 'underline',
+  },
+  height190: {height: 190},
+  textSignupTab: {
+    paddingHorizontal: 25,
+    paddingVertical: 9,
+  },
+  textSignup: {
+    alignSelf: 'center',
+    padding: 22,
+  },
 });

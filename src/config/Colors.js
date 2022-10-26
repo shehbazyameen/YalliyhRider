@@ -5,6 +5,8 @@ export const colors = {
   primaryOrangeColor: '#E78901',
   colorWhite: '#FFFFFF',
   black: 'black',
+  grayLight: 'C6C6C6',
   bordergray: '#EFEFEF',
+  textColorLogin: '#000024',
   ///
 };
