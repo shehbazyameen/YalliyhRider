@@ -71,113 +71,183 @@ const SignUpLogin = ({navigation}) => {
           </View>
         </View>
         <View style={[styling.marginTop]} />
-        <ScrollView>
-          <InputFeild
-            // refValueCurrent={refenterpassword}
-            // onFocusBorderColor={true}
-            textLabels={labels.FullName + labels.staric}
-            returnKeyType={'next'}
-            paddingHorizontal={0}
-            paddingHorizontalRight={22}
-            // imageInputField
-            // placeholder={'abc'}
-            leftIcon={Assets.user}
-            // rightIcon={Assets.user}
-            // value={firstName}
-            // onChange={e => setFirstName(e)}
-          />
-          <View style={[styling.marginTop]} />
-          <InputFeild
-            // refValueCurrent={refenterpassword}
-            onFocusBorderColor={true}
-            textLabels={labels.LastName + labels.staric}
-            returnKeyType={'xyz'}
-            paddingHorizontal={0}
-            paddingHorizontalRight={22}
-            // imageInputField
-            // placeholder={'Abc'}
-            leftIcon={Assets.user}
-            // rightIcon={Assets.user}
-            // value={firstName}
-            // onChange={e => setFirstName(e)}
-          />
-          <View style={[styling.marginTop]} />
-          <InputFeild
-            // refValueCurrent={refenterpassword}
-            onFocusBorderColor={true}
-            textLabels={labels.PhoneNumber + labels.staric}
-            returnKeyType={'next'}
-            paddingHorizontal={0}
-            paddingHorizontalRight={22}
-            // imageInputField
-            // placeholder={'+1234567890'}
-            leftIcon={Assets.phoneCall}
-            // rightIcon={Assets.phoneCall}
-            // value={firstName}
-            // onChange={e => setFirstName(e)}
-          />
-          <View style={[styling.marginTop]} />
-          <InputFeild
-            // refValueCurrent={refenterpassword}
-            onFocusBorderColor={true}
-            textLabels={labels.Email + labels.staric}
-            returnKeyType={'next'}
-            paddingHorizontal={0}
-            paddingHorizontalRight={22}
-            // imageInputField
-            // placeholder={'abc@example.com'}
-            leftIcon={Assets.email}
-            // value={firstName}
-            // onChange={e => setFirstName(e)}
-          />
-          <View style={[styling.marginTop]} />
 
-          <InputFeild
-            // refValueCurrent={refenterpassword}
-            onFocusBorderColor={true}
-            textLabels={labels.Email + labels.staric}
-            returnKeyType={'next'}
-            paddingHorizontal={0}
-            paddingHorizontalRight={22}
-            // imageInputField
-            // placeholder={'*************'}
-            leftIcon={Assets.lock}
-            rightIcon={Assets.eyeSlash}
-            rightIconOnPress={() => setshoweye(!showeye)}
-            secure={showeye}
-            value={password}
-            onChange={e => setPassword(e)}
-          />
-          <View style={[styling.marginTop]} />
+        {tab ? (
+          <ScrollView>
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              // onFocusBorderColor={true}
+              textLabels={labels.FullName + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'abc'}
+              leftIcon={Assets.user}
+              // rightIcon={Assets.user}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+            <View style={[styling.marginTop]} />
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.LastName + labels.staric}
+              returnKeyType={'xyz'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'Abc'}
+              leftIcon={Assets.user}
+              // rightIcon={Assets.user}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+            <View style={[styling.marginTop]} />
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.PhoneNumber + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'+1234567890'}
+              leftIcon={Assets.phoneCall}
+              // rightIcon={Assets.phoneCall}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+            <View style={[styling.marginTop]} />
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.Email + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'abc@example.com'}
+              leftIcon={Assets.email}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+            <View style={[styling.marginTop]} />
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.Email + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'*************'}
+              leftIcon={Assets.lock}
+              rightIcon={Assets.eyeSlash}
+              rightIconOnPress={() => setshoweye(!showeye)}
+              secure={showeye}
+              value={password}
+              onChange={e => setPassword(e)}
+            />
+            <View style={[styling.marginTop]} />
 
-          <InputFeild
-            // refValueCurrent={refenterpassword}
-            onFocusBorderColor={true}
-            textLabels={labels.ConfirmPassword + labels.staric}
-            returnKeyType={'next'}
-            paddingHorizontal={0}
-            paddingHorizontalRight={22}
-            // imageInputField
-            // placeholder={'*************'}
-            leftIcon={Assets.lock}
-            rightIcon={Assets.eyeSlash}
-            rightIconOnPress={() => setShoweyeConfirm(!showeyeconfirm)}
-            secure={showeyeconfirm}
-            // value={firstName}
-            // onChange={e => setFirstName(e)}
-          />
-          <View style={styling.textSignup}>
-            <Buton title={labels.SignUp} />
-          </View>
-          <TouchableOpacity onPress={() => {}} style={styling.touch}>
-            <Text style={[styling.textAlready]}>
-              {labels.alreadyHaveAccount}
-            </Text>
-            <Text style={styling.textAlreadyLogin}>{labels.Login}</Text>
-          </TouchableOpacity>
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.ConfirmPassword + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'*************'}
+              leftIcon={Assets.lock}
+              rightIcon={Assets.eyeSlash}
+              rightIconOnPress={() => setShoweyeConfirm(!showeyeconfirm)}
+              secure={showeyeconfirm}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+            <View>
+              <Text style={styling.textAlreadyLogin}>
+                {labels.forgetPassword}
+              </Text>
+            </View>
+            <View style={styling.textSignup}>
+              <Buton title={labels.SignUp} />
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                setTab(!tab);
+              }}
+              style={styling.touch}>
+              <Text style={[styling.textAlready]}>
+                {labels.alreadyHaveAccount}
+              </Text>
+              <Text style={styling.textAlreadyLogin}>{labels.Login}</Text>
+            </TouchableOpacity>
 
-          <View style={[styling.marginTop]} />
-        </ScrollView>
+            <View style={[styling.marginTop]} />
+          </ScrollView>
+        ) : (
+          <ScrollView>
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.Email + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'abc@example.com'}
+              leftIcon={Assets.email}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+            <View style={[styling.marginTop]} />
+            <InputFeild
+              // refValueCurrent={refenterpassword}
+              onFocusBorderColor={true}
+              textLabels={labels.Password + labels.staric}
+              returnKeyType={'next'}
+              paddingHorizontal={0}
+              paddingHorizontalRight={22}
+              // imageInputField
+              // placeholder={'*************'}
+              leftIcon={Assets.lock}
+              rightIcon={Assets.eyeSlash}
+              rightIconOnPress={() => setShoweyeConfirm(!showeyeconfirm)}
+              secure={showeyeconfirm}
+              // value={firstName}
+              // onChange={e => setFirstName(e)}
+            />
+
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('Email');
+              }}
+              style={styling.touchforgot}>
+              <Text style={[styling.textForgotPassword]}>
+                {labels.forgetPassword}
+              </Text>
+            </TouchableOpacity>
+
+            <View style={styling.textSignup}>
+              <Buton title={labels.Login} />
+            </View>
+            <TouchableOpacity
+              onPress={() => {
+                setTab(!tab);
+              }}
+              style={styling.touch}>
+              <Text style={[styling.textAlready]}>
+                {labels.haveAccountSignUp}
+              </Text>
+              <Text style={styling.textAlreadyLogin}>{labels.SignUp}</Text>
+            </TouchableOpacity>
+
+            <View style={[styling.marginTop]} />
+          </ScrollView>
+        )}
       </View>
     </View>
   );

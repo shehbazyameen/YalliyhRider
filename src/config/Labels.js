@@ -10,4 +10,9 @@ export const labels = {
   Email: 'Email',
   ConfirmPassword: 'Confirm Password',
   alreadyHaveAccount: 'Already Have An Account?',
+  haveAccountSignUp: "Don't Have Account? ",
+  forgetPassword: 'Forget Password?',
+  passwordRecovery: 'Password Recovery',
+  backToLogin: 'Back To Login',
+  continue: 'Continue',
 };

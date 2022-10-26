@@ -8,5 +8,7 @@ export const colors = {
   grayLight: 'C6C6C6',
   bordergray: '#EFEFEF',
   textColorLogin: '#000024',
+  lightGray: '#B4B4B4',
+
   ///
 };

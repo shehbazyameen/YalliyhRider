@@ -1,19 +1,18 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
-const {width, height} = Dimensions.get('window');
-
-const Buton = ({title = '', backgroundColor, onPress = () => {}}) => {
+const Buton = ({
+  title = '',
+  backgroundColor = colors.primaryOrangeColor,
+  onPress = () => {},
+}) => {
   return (
     <>
-      <TouchableOpacity style={[styles.main]} onPress={onPress}>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        style={[styles.main, {backgroundColor: backgroundColor}]}
+        onPress={onPress}>
         <Text style={[styles.text]}>{title}</Text>
       </TouchableOpacity>
     </>

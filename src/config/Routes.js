@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Splash, Home, SignUpLogin} from '../screens';
+import {Splash, Home, SignUpLogin, Email} from '../screens';
 const AuthStack = createNativeStackNavigator();
 const AppStack = createNativeStackNavigator();
 const RootStack = createNativeStackNavigator();
@@ -30,6 +30,12 @@ const AuthenticationStack = () => {
         options={{headerShown: false}}
         name="SignUpLogin"
         component={SignUpLogin}
+      />
+
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="Email"
+        component={Email}
       />
     </AuthStack.Navigator>
   );

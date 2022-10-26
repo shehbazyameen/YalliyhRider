@@ -28,6 +28,7 @@ export default StyleSheet.create({
     borderTopLeftRadius: 24,
     marginTop: -22,
     padding: 22,
+    paddingHorizontal: 45,
   },
   marginTop: {marginTop: 16},
   viewTaber: {
@@ -46,7 +47,6 @@ export default StyleSheet.create({
   },
   touch: {
     flexDirection: 'row',
-    marginTop: 5,
     alignSelf: 'center',
   },
   textAlready: {
@@ -67,7 +67,7 @@ export default StyleSheet.create({
   },
   textSignup: {
     alignSelf: 'center',
-    padding: 22,
+    padding: 4,
   },
   textForgotPassword: {
     fontSize: 18,
@@ -75,8 +75,15 @@ export default StyleSheet.create({
     color: colors.lightGray,
     textDecorationLine: 'underline',
   },
-  touchforgot: {
-    alignSelf: 'flex-end',
-    paddingVertical: 4,
+  textBackToLogin: {
+    fontSize: 24,
+    fontFamily: fonts.DongleRegular,
+    color: colors.textColorLogin,
+    textDecorationLine: 'underline',
+  },
+  textPasswordRecovery: {
+    fontSize: 40,
+    fontFamily: fonts.DongleBold,
+    color: colors.textColorLogin,
   },
 });
