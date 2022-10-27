@@ -53,7 +53,12 @@ const Email = ({navigation}) => {
           <View style={[styling.marginTop]} />
           <View style={[styling.marginTop]} />
           <View style={styling.textSignup}>
-            <Buton title={labels.continue} />
+            <Buton
+              title={labels.continue}
+              onPress={() => {
+                navigation.navigate('Verification');
+              }}
+            />
           </View>
           <TouchableOpacity
             onPress={() => {

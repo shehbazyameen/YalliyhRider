@@ -8,6 +8,7 @@ const fonts = {
   ///Poppins
   PoppinsLight: Platform.OS === 'ios' ? 'Poppins-Light' : 'Poppins-Light',
   PoppinsRegular: Platform.OS === 'ios' ? 'Poppins-Regular' : 'Poppins-Regular',
+  PoppinsBold: Platform.OS === 'ios' ? 'Poppins-Bold' : 'Poppins-Bold',
 };
 
 export default fonts;

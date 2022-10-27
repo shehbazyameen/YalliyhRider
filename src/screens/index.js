@@ -1,6 +1,7 @@
 import Home from './Home/Home';
-import Splash from './Auth/Splash/Splash';
-import SignUpLogin from './Auth/SignUpLogin/SignUpLogin';
 import Email from './Auth/Email/Email';
+import Splash from './Auth/Splash/Splash';
+import Verification from './Auth/Verification/Verification';
+import SignUpLogin from './Auth/SignUpLogin/SignUpLogin';
 
-export {Splash, Home, SignUpLogin, Email};
+export {Splash, Home, SignUpLogin, Email, Verification};

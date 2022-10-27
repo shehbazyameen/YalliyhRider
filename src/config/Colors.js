@@ -9,6 +9,7 @@ export const colors = {
   bordergray: '#EFEFEF',
   textColorLogin: '#000024',
   lightGray: '#B4B4B4',
+  timerColor: '#CCCCCC',
 
   ///
 };

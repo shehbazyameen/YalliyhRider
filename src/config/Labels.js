@@ -15,4 +15,8 @@ export const labels = {
   passwordRecovery: 'Password Recovery',
   backToLogin: 'Back To Login',
   continue: 'Continue',
+  verification: 'Verification',
+  verificationCode: 'Verification Code*',
+  resend: 'Resend',
+  didNt: "Didn't Receive?  ",
 };
