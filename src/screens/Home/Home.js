@@ -1,12 +1,38 @@
-import {View, Text} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
+import {View, Text, Button} from 'react-native';
 import styling from './Styling';
 import {InputFeild} from '../../components/InputField';
 import CustomHeader from '../../components/CustomHeader';
 import {Assets} from '../../assets';
 import {labels} from '../../config/Labels';
+import Modal from '../../components/CustomModal';
+import CustomModal from '../../components/CustomModal';
 
 const Home = ({navigation}) => {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+  //
+
+  const renderModal = () => {
+    return (
+      <>
+        <View
+          style={{
+            backgroundColor: 'red',
+            position: 'absolute',
+            width: '100%',
+            bottom: 0,
+            padding: 22,
+          }}>
+          <Text>ddd</Text>
+        </View>
+      </>
+    );
+  };
+
   return (
     <View style={[styling.Container]}>
       <CustomHeader
@@ -21,19 +47,13 @@ const Home = ({navigation}) => {
         rightIcon1={Assets.bell}
         rightIcon1Onpress={() => {}}
       />
-      <InputFeild
-        // refValueCurrent={refenterpassword}
-        onFocusBorderColor={true}
-        textLabels={'UserName* '}
-        returnKeyType={'next'}
-        paddingHorizontal={0}
-        paddingHorizontalRight={22}
-        // imageInputField
-        placeholder={'First Name'}
-        // leftIcon={Assets.Password}
-        // rightIcon={Assets.user}
-        // value={firstName}
-        // onChange={e => setFirstName(e)}
+      <Button title="Show modal" onPress={toggleModal} />
+      <CustomModal
+        Children={renderModal()}
+        isModalVisible={isModalVisible}
+        onBackdropPress={() => {
+          toggleModal();
+        }}
       />
     </View>
   );
