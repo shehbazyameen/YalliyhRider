@@ -2,10 +2,25 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import styling from './Styling';
 import {InputFeild} from '../../components/InputField';
+import CustomHeader from '../../components/CustomHeader';
+import {Assets} from '../../assets';
+import {labels} from '../../config/Labels';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={[styling.Container]}>
+      <CustomHeader
+        barStyle="light-content"
+        statusBarProps={{backgroundColor: 'transparent', translucent: true}}
+        backgroundImage={Assets.HeaderBack2}
+        leftIcon={Assets.menu}
+        leftRoute={() => {
+          navigation.openDrawer();
+        }}
+        centerTitle={labels.youAreOnline}
+        rightIcon1={Assets.bell}
+        rightIcon1Onpress={() => {}}
+      />
       <InputFeild
         // refValueCurrent={refenterpassword}
         onFocusBorderColor={true}

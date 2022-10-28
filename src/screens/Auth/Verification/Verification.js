@@ -13,7 +13,6 @@ import {
 import {ScrollView} from 'react-native';
 import Buton from '../../../components/Buton';
 import {labels} from '../../../config/Labels';
-import {colors} from '../../../config/Colors';
 
 const Verification = ({navigation}) => {
   const [value, setValue] = useState('');
@@ -118,7 +117,12 @@ const Verification = ({navigation}) => {
           </View>
 
           <View style={styling.textSignup}>
-            <Buton title={labels.continue} />
+            <Buton
+              title={labels.continue}
+              onPress={() => {
+                navigation.navigate('SetPassword');
+              }}
+            />
           </View>
           <TouchableOpacity
             onPress={() => {

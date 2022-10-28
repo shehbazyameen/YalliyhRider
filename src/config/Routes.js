@@ -1,10 +1,21 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Splash, Home, SignUpLogin, Email, Verification} from '../screens';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import CustomDrawerContent from '../components/CustomDrawerContent';
+import {
+  Splash,
+  Home,
+  SignUpLogin,
+  Email,
+  Verification,
+  SetPassword,
+} from '../screens';
+
 const AuthStack = createNativeStackNavigator();
 const AppStack = createNativeStackNavigator();
 const RootStack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const HomeStack = ({props}) => {
   return (
@@ -43,7 +54,25 @@ const AuthenticationStack = () => {
         name="Verification"
         component={Verification}
       />
+
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="SetPassword"
+        component={SetPassword}
+      />
     </AuthStack.Navigator>
+  );
+};
+const MyDrawer = () => {
+  return (
+    <Drawer.Navigator
+      drawerContent={props => {
+        return <CustomDrawerContent {...props} />;
+      }}>
+      <Drawer.Screen options={{headerShown: false}} name="HomeStack">
+        {props => <HomeStack {...props} />}
+      </Drawer.Screen>
+    </Drawer.Navigator>
   );
 };
 
@@ -57,8 +86,8 @@ const RootNavigator = () => {
       />
       <RootStack.Screen
         options={{headerShown: false}}
-        name="HomeStack"
-        component={HomeStack}
+        name="MyDrawer"
+        component={MyDrawer}
       />
     </RootStack.Navigator>
   );

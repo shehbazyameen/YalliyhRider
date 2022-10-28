@@ -143,7 +143,9 @@ const SignUpLogin = ({navigation}) => {
               // imageInputField
               // placeholder={'*************'}
               leftIcon={Assets.lock}
-              rightIcon={Assets.eyeSlash}
+              rightIcon={
+                showeye ? Assets.iconAwesomeEyeVisible : Assets.eyeSlash
+              }
               rightIconOnPress={() => setshoweye(!showeye)}
               secure={showeye}
               value={password}
@@ -161,7 +163,9 @@ const SignUpLogin = ({navigation}) => {
               // imageInputField
               // placeholder={'*************'}
               leftIcon={Assets.lock}
-              rightIcon={Assets.eyeSlash}
+              rightIcon={
+                showeyeconfirm ? Assets.iconAwesomeEyeVisible : Assets.eyeSlash
+              }
               rightIconOnPress={() => setShoweyeConfirm(!showeyeconfirm)}
               secure={showeyeconfirm}
               // value={firstName}
@@ -214,7 +218,9 @@ const SignUpLogin = ({navigation}) => {
               // imageInputField
               // placeholder={'*************'}
               leftIcon={Assets.lock}
-              rightIcon={Assets.eyeSlash}
+              rightIcon={
+                showeyeconfirm ? Assets.iconAwesomeEyeVisible : Assets.eyeSlash
+              }
               rightIconOnPress={() => setShoweyeConfirm(!showeyeconfirm)}
               secure={showeyeconfirm}
               // value={firstName}
@@ -232,7 +238,12 @@ const SignUpLogin = ({navigation}) => {
             </TouchableOpacity>
 
             <View style={styling.textSignup}>
-              <Buton title={labels.Login} />
+              <Buton
+                title={labels.Login}
+                onPress={() => {
+                  navigation.navigate('MyDrawer');
+                }}
+              />
             </View>
             <TouchableOpacity
               onPress={() => {

@@ -19,4 +19,5 @@ export const labels = {
   verificationCode: 'Verification Code*',
   resend: 'Resend',
   didNt: "Didn't Receive?  ",
+  youAreOnline: 'You Are Online',
 };

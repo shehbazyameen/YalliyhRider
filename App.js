@@ -1,4 +1,3 @@
-import React from 'react';
 import {AppNavigator} from './src/config/Routes';
 
 const App = () => {
@@ -10,3 +9,6 @@ const App = () => {
 };
 
 export default App;
+
+
+
