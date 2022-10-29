@@ -3,17 +3,22 @@ import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
 const Buton = ({
+  onPress = () => {},
   title = '',
   backgroundColor = colors.primaryOrangeColor,
-  onPress = () => {},
+  color = colors.colorWhite,
+  borderWidth,
 }) => {
   return (
     <>
       <TouchableOpacity
         activeOpacity={0.7}
-        style={[styles.main, {backgroundColor: backgroundColor}]}
+        style={[
+          styles.main,
+          {backgroundColor: backgroundColor, borderWidth: borderWidth},
+        ]}
         onPress={onPress}>
-        <Text style={[styles.text]}>{title}</Text>
+        <Text style={[styles.text, {color: color}]}>{title}</Text>
       </TouchableOpacity>
     </>
   );

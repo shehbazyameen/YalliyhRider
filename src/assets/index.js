@@ -21,4 +21,11 @@ export const Assets = {
   star: require('../assets/images/star.png'),
   call: require('../assets/images/call.png'),
   close: require('../assets/images/Close.png'),
+  carYellow: require('../assets/images/carYellow.png'),
+  chat: require('../assets/images/chat.png'),
+  offline: require('../assets/images/offline.png'),
+  pin: require('../assets/images/pin.png'),
+  send: require('../assets/images/send.png'),
+  userAvatar: require('../assets/images/userAvatar.png'),
+  LineVerticle: require('../assets/images/LineVerticle.png'),
 };

@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Button} from 'react-native';
 import styling from './Styling';
-import {InputFeild} from '../../components/InputField';
 import CustomHeader from '../../components/CustomHeader';
 import {Assets} from '../../assets';
 import {labels} from '../../config/Labels';
-import Modal from '../../components/CustomModal';
 import CustomModal from '../../components/CustomModal';
+import {colors} from '../../config/Colors';
+import StartModal from '../../components/StartModal';
 
 const Home = ({navigation}) => {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -19,16 +19,31 @@ const Home = ({navigation}) => {
   const renderModal = () => {
     return (
       <>
-        <View
-          style={{
-            backgroundColor: 'red',
-            position: 'absolute',
-            width: '100%',
-            bottom: 0,
-            padding: 22,
-          }}>
-          <Text>ddd</Text>
-        </View>
+        <StartModal
+          image={Assets.dummyImageSquare}
+          userName={'User Name'}
+          userNameNo={'123456789'}
+          tripId={'Trip ID: AB_001'}
+          pickUpLocationTitle={'Drop off Location:'}
+          pickUpLocation={'A-15, block 2, Street XYZ'}
+          dropLocationTitle={'Drop off Location:'}
+          dropLocation={'A-15, block 2, Street XYZ'}
+          price={'10000'}
+          date={'12/12/2022'}
+          time={'12:12'}
+          onPressPick={() => {
+            alert('hi');
+          }}
+          onPressDrop={() => {
+            alert('hi');
+          }}
+          onPressStartRide={() => {
+            alert('hi');
+          }}
+          onPressCancel={() => {
+            alert('hi');
+          }}
+        />
       </>
     );
   };
@@ -48,7 +63,9 @@ const Home = ({navigation}) => {
         rightIcon1Onpress={() => {}}
       />
       <Button title="Show modal" onPress={toggleModal} />
+
       <CustomModal
+        backdropColor={colors.transparent}
         Children={renderModal()}
         isModalVisible={isModalVisible}
         onBackdropPress={() => {

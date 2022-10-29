@@ -10,7 +10,6 @@ import {
 import {colors} from '../config/Colors';
 import {Input} from '@rneui/themed';
 import fonts from '../assets/fonts';
-const {width, height} = Dimensions.get('window');
 
 export const InputFeild = ({
   onChange = () => {},

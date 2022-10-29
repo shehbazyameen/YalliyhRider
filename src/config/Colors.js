@@ -10,6 +10,8 @@ export const colors = {
   textColorLogin: '#000024',
   lightGray: '#B4B4B4',
   timerColor: '#CCCCCC',
+  modalBackGround: '#999C9E',
+  transparent: 'transparent',
 
   ///
 };
