@@ -28,4 +28,6 @@ export const Assets = {
   send: require('../assets/images/send.png'),
   userAvatar: require('../assets/images/userAvatar.png'),
   LineVerticle: require('../assets/images/LineVerticle.png'),
+  arrowLeftShort: require('../assets/images/arrow-left-short.png'),
+  changePasswordImageBack: require('../assets/images/changePasswordImageBack.png'),
 };

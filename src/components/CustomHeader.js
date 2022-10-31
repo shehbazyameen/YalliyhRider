@@ -70,23 +70,24 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         marginTop: 0,
-        height: width / 4,
+        height: width / 3.5,
       },
       android: {
         marginTop: 0,
-        height: width / 4,
+        height: width / 3.5,
       },
     }),
   },
   viewHeader: {
     justifyContent: 'center',
     height: 30,
+    marginTop: -22,
   },
   centerText: {
     fontFamily: fonts.DongleBold,
     color: colors.colorWhite,
-    fontSize: 30,
-    height: 30,
+    fontSize: 26,
+    height: 26,
   },
   imageHW: {height: 20, width: 20},
 });

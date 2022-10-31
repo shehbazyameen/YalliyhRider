@@ -20,4 +20,9 @@ export const labels = {
   resend: 'Resend',
   didNt: "Didn't Receive?  ",
   youAreOnline: 'You Are Online',
+  changePassword: 'Change Password',
+  currentPassword: 'Current Password',
+  newPassword: 'New Password',
+  confirmPassword: 'Confirm Password',
+  update: 'Update',
 };

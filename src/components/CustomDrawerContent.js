@@ -52,7 +52,15 @@ export default function CustomDrawerContent({props, navigation}) {
       title: 'Contact Admin',
       image: Assets.call,
       onPress: () => {
-        // navigation.navigate();
+        // navigation.navigate('ChangePassword');
+      },
+    },
+    {
+      key: 4,
+      title: 'Change Password',
+      image: Assets.dummyImageSquare,
+      onPress: () => {
+        navigation.navigate('ChangePassword');
       },
     },
     {
@@ -92,9 +100,7 @@ export default function CustomDrawerContent({props, navigation}) {
               <TouchableOpacity
                 activeOpacity={0.7}
                 style={[styles.touchTxt]}
-                onPress={() => {
-                  item.onPress;
-                }}>
+                onPress={item.onPress}>
                 <Image
                   source={item.image}
                   style={styles.hW}

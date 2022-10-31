@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  View,
-  Text,
-  Dimensions,
-} from 'react-native';
+import {StyleSheet, Image, TouchableOpacity, View, Text} from 'react-native';
 import {colors} from '../config/Colors';
 import {Input} from '@rneui/themed';
 import fonts from '../assets/fonts';
@@ -31,7 +24,7 @@ export const InputFeild = ({
   maxLength = 100,
   autoFocus = false,
   autoCapitalize = 'none',
-  placeholderTextColor = colors.primaryBlue70,
+  placeholderTextColor = colors.placeHolderTextColor,
   disabled,
   paddingHorizontal = 22,
   paddingHorizontalRight = 0,
@@ -50,6 +43,7 @@ export const InputFeild = ({
       </Text>
 
       <Input
+        style={{fontSize: 11}}
         accessibilityViewIsModal={true}
         disabled={disabled}
         blurOnSubmit={false}

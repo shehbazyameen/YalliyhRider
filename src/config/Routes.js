@@ -10,6 +10,7 @@ import {
   Email,
   Verification,
   SetPassword,
+  ChangePassword,
 } from '../screens';
 
 const AuthStack = createNativeStackNavigator();
@@ -24,6 +25,11 @@ const HomeStack = ({props}) => {
         options={{headerShown: false}}
         name="Home"
         component={Home}
+      />
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="ChangePassword"
+        component={ChangePassword}
       />
     </AppStack.Navigator>
   );

@@ -13,5 +13,7 @@ export const colors = {
   modalBackGround: '#999C9E',
   transparent: 'transparent',
 
+  placeHolderTextColor: '#999999',
+
   ///
 };
