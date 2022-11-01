@@ -5,6 +5,7 @@ import Verification from './Auth/Verification/Verification';
 import SignUpLogin from './Auth/SignUpLogin/SignUpLogin';
 import SetPassword from './Auth/SetPassword/SetPassword';
 import ChangePassword from './ChangePassword/ChangePassword';
+import RatingsReviews from './RatingsReviews/RatingsReviews';
 
 export {
   Splash,
@@ -14,4 +15,5 @@ export {
   Verification,
   SetPassword,
   ChangePassword,
+  RatingsReviews,
 };

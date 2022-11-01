@@ -44,7 +44,7 @@ export default function CustomDrawerContent({props, navigation}) {
       title: 'Ratings and Reviews',
       image: Assets.star,
       onPress: () => {
-        // navigation.navigate();
+        navigation.navigate('RatingsReviews');
       },
     },
     {

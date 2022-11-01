@@ -86,4 +86,11 @@ export default StyleSheet.create({
     fontFamily: fonts.DongleBold,
     color: colors.textColorLogin,
   },
+  viewBorder:{
+    backgroundColor: colors.colorWhite,
+    height: 32,
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+    marginTop: -12,
+  }
 });

@@ -1,11 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-} from 'react-native';
+import React, {useState} from 'react';
+import {View, ImageBackground, Dimensions} from 'react-native';
 import styling from './Styling';
 import {Assets} from '../../assets';
 import {InputFeild} from '../../components/InputField';
@@ -13,7 +7,6 @@ import {ScrollView} from 'react-native';
 import Buton from '../../components/Buton';
 import {labels} from '../../config/Labels';
 import CustomHeader from '../../components/CustomHeader';
-import {colors} from '../../config/Colors';
 
 const {width, height} = Dimensions.get('window');
 
@@ -43,15 +36,7 @@ const ChangePassword = ({navigation}) => {
           height: height,
         }}
         resizeMode="contain">
-        <View
-          style={{
-            backgroundColor: colors.colorWhite,
-            height: 32,
-            borderTopLeftRadius: 16,
-            borderTopRightRadius: 16,
-            marginTop: -12,
-          }}
-        />
+        <View style={styling.viewBorder} />
         <View style={styling.viewInputField}>
           {/* <View style={[styling.marginTop]} /> */}
           <ScrollView>
