@@ -25,5 +25,9 @@ export const labels = {
   newPassword: 'New Password',
   confirmPassword: 'Confirm Password',
   update: 'Update',
-  ratingsReviews:'Ratings & Reviews',
+  ratingsReviews: 'Ratings & Reviews',
+  contactUs: 'Contact Us',
+  message: 'Message',
+  send:'Send',
+  enterMessage:'Enter Message',
 };

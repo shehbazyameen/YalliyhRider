@@ -13,6 +13,7 @@ import {Assets} from '../assets';
 import fonts from '../assets/fonts';
 
 const {width, height} = Dimensions.get('window');
+
 export default function CustomDrawerContent({props, navigation}) {
   //All States
 
@@ -52,17 +53,10 @@ export default function CustomDrawerContent({props, navigation}) {
       title: 'Contact Admin',
       image: Assets.call,
       onPress: () => {
-        // navigation.navigate('ChangePassword');
+        navigation.navigate('ContactUs');
       },
     },
-    {
-      key: 4,
-      title: 'Change Password',
-      image: Assets.dummyImageSquare,
-      onPress: () => {
-        navigation.navigate('ChangePassword');
-      },
-    },
+
     {
       key: 5,
       title: 'LogOut',
