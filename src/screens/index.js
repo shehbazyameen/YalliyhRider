@@ -7,6 +7,8 @@ import SetPassword from './Auth/SetPassword/SetPassword';
 import ChangePassword from './ChangePassword/ChangePassword';
 import RatingsReviews from './RatingsReviews/RatingsReviews';
 import ContactUs from './ContactUs/ContactUs';
+import Profile from './Profile/Profile';
+import EditProfile from './Profile/EditProfile';
 
 export {
   Splash,
@@ -18,4 +20,6 @@ export {
   ChangePassword,
   RatingsReviews,
   ContactUs,
+  Profile,
+  EditProfile,
 };

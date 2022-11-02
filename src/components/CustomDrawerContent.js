@@ -16,13 +16,14 @@ const {width, height} = Dimensions.get('window');
 
 export default function CustomDrawerContent({props, navigation}) {
   //All States
-
   const [list, setList] = useState([
     {
       key: 0,
       title: 'Profile',
-      onPress: () => {},
       image: Assets.userAvatarFilled,
+      onPress: () => {
+        navigation.navigate('Profile');
+      },
     },
     {
       key: 1,

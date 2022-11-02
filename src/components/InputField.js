@@ -43,9 +43,9 @@ export const InputFeild = ({
       </Text>
 
       <Input
+        editable={disabled}
         style={{fontSize: 11}}
         accessibilityViewIsModal={true}
-        disabled={disabled}
         blurOnSubmit={false}
         placeholderTextColor={placeholderTextColor}
         autoCapitalize={autoCapitalize}
@@ -102,7 +102,6 @@ export const InputFeild = ({
         onBlur={onBlur}
         onFocus={onFocus}
         onChangeText={onChange}
-        editable={editable}
         keyboardType={keyboardType}
         maxLength={maxLength}
         containerStyle={[

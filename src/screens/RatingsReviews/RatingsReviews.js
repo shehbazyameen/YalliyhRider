@@ -1,5 +1,11 @@
 import React, {useState} from 'react';
-import {Dimensions, ScrollView, Text, View} from 'react-native';
+import {
+  Dimensions,
+  ScrollView,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import styling from './Styling';
 import CustomHeader from '../../components/CustomHeader';
 import {Assets} from '../../assets';

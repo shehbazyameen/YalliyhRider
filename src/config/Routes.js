@@ -13,6 +13,8 @@ import {
   ChangePassword,
   RatingsReviews,
   ContactUs,
+  Profile,
+  EditProfile,
 } from '../screens';
 
 const AuthStack = createNativeStackNavigator();
@@ -42,6 +44,17 @@ const HomeStack = ({props}) => {
         options={{headerShown: false}}
         name="ContactUs"
         component={ContactUs}
+      />
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="Profile"
+        component={Profile}
+      />
+
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="EditProfile"
+        component={EditProfile}
       />
     </AppStack.Navigator>
   );

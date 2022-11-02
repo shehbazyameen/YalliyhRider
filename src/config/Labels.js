@@ -28,6 +28,10 @@ export const labels = {
   ratingsReviews: 'Ratings & Reviews',
   contactUs: 'Contact Us',
   message: 'Message',
-  send:'Send',
-  enterMessage:'Enter Message',
+  send: 'Send',
+  enterMessage: 'Enter Message',
+  profile: 'Profile',
+  editProfile: 'Edit Profile',
+  edit: 'Edit',
+  changePassword:'Change Password',
 };

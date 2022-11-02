@@ -30,4 +30,6 @@ export const Assets = {
   LineVerticle: require('../assets/images/LineVerticle.png'),
   arrowLeftShort: require('../assets/images/arrow-left-short.png'),
   changePasswordImageBack: require('../assets/images/changePasswordImageBack.png'),
+  profileDumy: require('../assets/images/profile.png'),
+  camera: require('../assets/images/camera.png'),
 };
