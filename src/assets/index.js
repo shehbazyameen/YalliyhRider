@@ -32,4 +32,5 @@ export const Assets = {
   changePasswordImageBack: require('../assets/images/changePasswordImageBack.png'),
   profileDumy: require('../assets/images/profile.png'),
   camera: require('../assets/images/camera.png'),
+  backImageProfile: require('../assets/images/backImageProfile.jpg'),
 };
