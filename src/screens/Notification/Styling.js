@@ -16,4 +16,11 @@ export default StyleSheet.create({
   padding22: {
     padding: 22,
   },
+  viewLine: {
+    height: 1,
+    width: '95%',
+    marginTop: 12,
+    backgroundColor: colors.bordergray,
+    alignSelf: 'flex-end',
+  },
 });
