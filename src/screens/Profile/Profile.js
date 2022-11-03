@@ -96,7 +96,7 @@ const Profile = ({navigation}) => {
               />
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('Email');
+                  navigation.navigate('ChangePassword');
                 }}
                 style={styling.touchforgot}>
                 <Text style={[styling.textForgotPassword]}>

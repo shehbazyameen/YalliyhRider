@@ -9,6 +9,7 @@ import RatingsReviews from './RatingsReviews/RatingsReviews';
 import ContactUs from './ContactUs/ContactUs';
 import Profile from './Profile/Profile';
 import EditProfile from './Profile/EditProfile';
+import MyVehicles from './MyVehicles/MyVehicles';
 
 export {
   Splash,
@@ -22,4 +23,5 @@ export {
   ContactUs,
   Profile,
   EditProfile,
+  MyVehicles,
 };

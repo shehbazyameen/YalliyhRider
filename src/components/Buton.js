@@ -27,8 +27,9 @@ const Buton = ({
 const styles = StyleSheet.create({
   main: {
     backgroundColor: colors.primaryOrangeColor,
-    height: 47,
-    width: 121,
+    height: 40,
+    // width: 121,
+    paddingHorizontal: 22,
     borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',

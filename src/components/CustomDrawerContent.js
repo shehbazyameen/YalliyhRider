@@ -38,7 +38,7 @@ export default function CustomDrawerContent({props, navigation}) {
       title: 'My Vehicles',
       image: Assets.car,
       onPress: () => {
-        // navigation.navigate();
+        navigation.navigate('MyVehicles');
       },
     },
     {

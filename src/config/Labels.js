@@ -33,5 +33,11 @@ export const labels = {
   profile: 'Profile',
   editProfile: 'Edit Profile',
   edit: 'Edit',
-  changePassword:'Change Password',
+  changePassword: 'Change Password',
+  myVehicle: 'My Vehicle',
+  vehicleType: 'Vehicle Type',
+  editDetails: 'Edit Details',
+  deleteVehicle: 'Delete Vehicle',
+  yes: 'Yes',
+  no: 'No',
 };

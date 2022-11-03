@@ -15,6 +15,7 @@ import {
   ContactUs,
   Profile,
   EditProfile,
+  MyVehicles,
 } from '../screens';
 
 const AuthStack = createNativeStackNavigator();
@@ -55,6 +56,12 @@ const HomeStack = ({props}) => {
         options={{headerShown: false}}
         name="EditProfile"
         component={EditProfile}
+      />
+
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="MyVehicles"
+        component={MyVehicles}
       />
     </AppStack.Navigator>
   );
