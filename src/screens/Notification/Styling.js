@@ -23,4 +23,10 @@ export default StyleSheet.create({
     backgroundColor: colors.bordergray,
     alignSelf: 'flex-end',
   },
+  view: {
+    flex: 1,
+    backgroundColor: colors.colorWhite,
+    padding: 22,
+    alignItems: 'center',
+  },
 });

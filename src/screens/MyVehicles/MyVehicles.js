@@ -33,14 +33,18 @@ const MyVehicles = ({navigation}) => {
           <View style={styling.view1}>
             <View style={styling.viewLine} />
             <View style={[styling.marginTop]} />
-
-            <Image source={Assets.chat} />
+            <View style={[styling.marginTop4]} />
+            <Image source={Assets.alert} resizeMode="contain" />
+            <View style={[styling.marginTop]} />
+            <View style={[styling.marginTop4]} />
             <Text style={styling.txtAlert}>{'Alert'}</Text>
-            <Text style={styling.txtAreYouSure}>{'Vehicle Name'}</Text>
+            <View style={[styling.marginTop4]} />
+            <Text style={styling.txtAreYouSure}>
+              {labels.areYouDeleteVehicle}
+            </Text>
             <View style={styling.viewBtn}>
               <Buton
                 title={labels.yes}
-
                 // onPress={toggleModal}
               />
               <View style={styling.width12} />
@@ -137,7 +141,7 @@ const MyVehicles = ({navigation}) => {
         </ImageBackground>
       </View>
       <CustomModal
-        backdropColor={colors.transparent}
+        // backdropColor={colors.transparent}
         Children={renderModal()}
         isModalVisible={isModalVisible}
         onBackdropPress={() => {

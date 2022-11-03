@@ -15,6 +15,7 @@ export default StyleSheet.create({
     fontSize: 14,
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
+    textAlign: 'center',
   },
   viewLine: {
     height: 2,
@@ -49,6 +50,7 @@ export default StyleSheet.create({
     paddingHorizontal: 45,
   },
   marginTop: {marginTop: 16},
+  marginTop4: {marginTop: 4},
   viewTaber: {
     paddingHorizontal: 7,
     paddingVertical: 6,
@@ -200,7 +202,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 32,
+    paddingTop: 12,
   },
   width12: {width: 12},
 });

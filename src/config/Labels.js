@@ -42,5 +42,5 @@ export const labels = {
   no: 'No',
   notifications: 'Notifications',
   viewMore: 'View More',
-  // padding22: 'padding22',
+  areYouDeleteVehicle:"Are you sure you want to delete\n your vehicle details?" 
 };

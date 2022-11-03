@@ -34,4 +34,5 @@ export const Assets = {
   camera: require('../assets/images/camera.png'),
   backImageProfile: require('../assets/images/backImageProfile.jpg'),
   bellIcon: require('../assets/images/bellIcon.png'),
+  alert: require('../assets/images/alert.jpg'),
 };
