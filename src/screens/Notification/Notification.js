@@ -6,6 +6,7 @@ import {Assets} from '../../assets';
 import {labels} from '../../config/Labels';
 import NotificationList from '../../components/NotificationList';
 import {colors} from '../../config/Colors';
+import Buton from '../../components/Buton';
 
 const Notification = ({navigation}) => {
   return (
@@ -24,10 +25,9 @@ const Notification = ({navigation}) => {
       <View
         style={{
           flex: 1,
-          // justifyContent: 'center',
-          // alignItems: 'center',
           backgroundColor: colors.colorWhite,
           padding: 22,
+          alignItems: 'center',
         }}>
         <NotificationList
           title={
@@ -35,6 +35,17 @@ const Notification = ({navigation}) => {
           }
           dateTime={'10:00  a.m | 05/04/21'}
         />
+        <View
+          style={{
+            height: 1,
+            width: '95%',
+            marginTop: 12,
+            backgroundColor: colors.bordergray,
+            alignSelf: 'flex-end',
+          }}
+        />
+        <View style={[styling.padding22]} />
+        <Buton title={labels.viewMore} onPress={() => {}} />
       </View>
     </View>
   );

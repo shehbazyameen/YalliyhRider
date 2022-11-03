@@ -41,4 +41,6 @@ export const labels = {
   yes: 'Yes',
   no: 'No',
   notifications: 'Notifications',
+  viewMore: 'View More',
+  // padding22: 'padding22',
 };

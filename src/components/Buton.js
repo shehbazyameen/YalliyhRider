@@ -12,7 +12,7 @@ const Buton = ({
   return (
     <>
       <TouchableOpacity
-        activeOpacity={0.7}
+        activeOpacity={0.9}
         style={[
           styles.main,
           {backgroundColor: backgroundColor, borderWidth: borderWidth},
