@@ -33,4 +33,5 @@ export const Assets = {
   profileDumy: require('../assets/images/profile.png'),
   camera: require('../assets/images/camera.png'),
   backImageProfile: require('../assets/images/backImageProfile.jpg'),
+  bellIcon: require('../assets/images/bellIcon.png'),
 };

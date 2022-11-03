@@ -10,6 +10,7 @@ import ContactUs from './ContactUs/ContactUs';
 import Profile from './Profile/Profile';
 import EditProfile from './Profile/EditProfile';
 import MyVehicles from './MyVehicles/MyVehicles';
+import Notification from './Notification/Notification';
 
 export {
   Splash,
@@ -24,4 +25,5 @@ export {
   Profile,
   EditProfile,
   MyVehicles,
+  Notification,
 };

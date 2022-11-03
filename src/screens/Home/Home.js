@@ -60,7 +60,9 @@ const Home = ({navigation}) => {
         }}
         centerTitle={labels.youAreOnline}
         rightIcon1={Assets.bell}
-        rightIcon1Onpress={() => {}}
+        rightIcon1Onpress={() => {
+          navigation.navigate('Notification');
+        }}
       />
       <Button title="Show modal" onPress={toggleModal} />
 

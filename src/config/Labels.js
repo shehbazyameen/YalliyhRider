@@ -40,4 +40,5 @@ export const labels = {
   deleteVehicle: 'Delete Vehicle',
   yes: 'Yes',
   no: 'No',
+  notifications: 'Notifications',
 };

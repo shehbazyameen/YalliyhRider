@@ -15,7 +15,7 @@ const ListText = ({
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={0.7}
-      style={(styles.centerView, {height: height})}>
+      style={[styles.centerView, {height: height}]}>
       <Text style={styles.textTitle} numberOfLines={1}>
         {title}
       </Text>
