@@ -35,4 +35,12 @@ export const Assets = {
   backImageProfile: require('../assets/images/backImageProfile.jpg'),
   bellIcon: require('../assets/images/bellIcon.png'),
   alert: require('../assets/images/alert.jpg'),
+  logout: require('../assets/images/logout.jpg'),
+  carSport: require('../assets/images/car-sport-outline.png'),
+  colorVehicle: require('../assets/images/ios-color-filter-outline.png'),
+  licenseLine: require('../assets/images/license-line.png'),
+  arrowDownFill: require('../assets/images/arrow-down-fill.png'),
+
+
+  
 };

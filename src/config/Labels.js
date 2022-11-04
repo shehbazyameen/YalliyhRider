@@ -42,5 +42,9 @@ export const labels = {
   no: 'No',
   notifications: 'Notifications',
   viewMore: 'View More',
-  areYouDeleteVehicle:"Are you sure you want to delete\n your vehicle details?" 
+  areYouDeleteVehicle:
+    'Are you sure you want to delete\n your vehicle details?',
+  areYouLogout: 'Are you sure you want to logout?',
+  save: 'Save',
+  editVehicle: 'Edit Vehicle',
 };

@@ -11,10 +11,53 @@ import {DrawerContentScrollView} from '@react-navigation/drawer';
 import {colors} from '../config/Colors';
 import {Assets} from '../assets';
 import fonts from '../assets/fonts';
+import Buton from './Buton';
+import CustomModal from './CustomModal';
+import {labels} from '../config/Labels';
 
 const {width, height} = Dimensions.get('window');
 
 export default function CustomDrawerContent({props, navigation}) {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+
+  //
+  const renderModal = () => {
+    return (
+      <>
+        <View style={styles.viewMain}>
+          <View style={styles.view1}>
+            <View style={styles.viewLine} />
+            <View style={[styles.marginTop]} />
+            <View style={[styles.marginTop4]} />
+            <Image source={Assets.logout} resizeMode="contain" />
+            <View style={[styles.marginTop]} />
+            <View style={[styles.marginTop4]} />
+            <Text style={styles.txtAlert}>{'Logout'}</Text>
+            <View style={[styles.marginTop4]} />
+            <Text style={styles.txtAreYouSure}>{labels.areYouLogout}</Text>
+            <View style={styles.viewBtn}>
+              <Buton
+                title={labels.yes}
+                // onPress={toggleModal}
+              />
+              <View style={styles.width12} />
+              <Buton
+                backgroundColor={colors.colorWhite}
+                title={labels.no}
+                color={colors.black}
+                borderWidth={1}
+                onPress={toggleModal}
+              />
+            </View>
+          </View>
+        </View>
+      </>
+    );
+  };
   //All States
   const [list, setList] = useState([
     {
@@ -62,52 +105,64 @@ export default function CustomDrawerContent({props, navigation}) {
       key: 5,
       title: 'LogOut',
       image: Assets.logOut,
-      onPress: () => {},
+      onPress: () => {
+        toggleModal();
+      },
     },
   ]);
 
   return (
-    <DrawerContentScrollView contentContainerStyle={styles.mainContainer}>
-      <View style={styles.viewImageProfile}>
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={styles.touchClose}
-          onPress={() => {
-            navigation.closeDrawer();
-          }}>
-          <Image source={Assets.close} resizeMode={'contain'} />
-        </TouchableOpacity>
-        <View style={styles.padding30}>
-          <Image
-            source={Assets.dummyImageSquare}
-            resizeMode={'contain'}
-            style={styles.imageProfile}
-          />
-          <Text numberOfLines={2} style={[styles.profileTitle]}>
-            {'User Name !'}
-          </Text>
+    <>
+      <DrawerContentScrollView contentContainerStyle={styles.mainContainer}>
+        <View style={styles.viewImageProfile}>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            style={styles.touchClose}
+            onPress={() => {
+              navigation.closeDrawer();
+            }}>
+            <Image source={Assets.close} resizeMode={'contain'} />
+          </TouchableOpacity>
+          <View style={styles.padding30}>
+            <Image
+              source={Assets.dummyImageSquare}
+              resizeMode={'contain'}
+              style={styles.imageProfile}
+            />
+            <Text numberOfLines={2} style={[styles.profileTitle]}>
+              {'User Name !'}
+            </Text>
+          </View>
         </View>
-      </View>
-      <View style={[styles.viewTouch]}>
-        {list.map((item, index) => {
-          return (
-            <>
-              <TouchableOpacity
-                activeOpacity={0.7}
-                style={[styles.touchTxt]}
-                onPress={item.onPress}>
-                <Image
-                  source={item.image}
-                  style={styles.hW}
-                  resizeMode="contain"
-                />
-                <Text style={[styles.txtTouch]}>{item.title}</Text>
-              </TouchableOpacity>
-            </>
-          );
-        })}
-      </View>
-    </DrawerContentScrollView>
+        <View style={[styles.viewTouch]}>
+          {list.map((item, index) => {
+            return (
+              <>
+                <TouchableOpacity
+                  activeOpacity={0.7}
+                  style={[styles.touchTxt]}
+                  onPress={item.onPress}>
+                  <Image
+                    source={item.image}
+                    style={styles.hW}
+                    resizeMode="contain"
+                  />
+                  <Text style={[styles.txtTouch]}>{item.title}</Text>
+                </TouchableOpacity>
+              </>
+            );
+          })}
+        </View>
+      </DrawerContentScrollView>
+      <CustomModal
+        // backdropColor={colors.transparent}
+        Children={renderModal()}
+        isModalVisible={isModalVisible}
+        onBackdropPress={() => {
+          toggleModal();
+        }}
+      />
+    </>
   );
 }
 
@@ -159,5 +214,49 @@ const styles = StyleSheet.create({
     // justifyContent: 'space-between',
     paddingHorizontal: 30,
     height: width / 9,
+  },
+
+  //
+  marginTop: {marginTop: 16},
+  marginTop4: {marginTop: 4},
+  view1: {
+    backgroundColor: colors.colorWhite,
+    padding: 22,
+    marginTop: 16,
+    borderTopLeftRadius: 38,
+    borderTopRightRadius: 38,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  viewMain: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
+    backgroundColor: '#AFB1B340',
+    borderRadius: 68,
+  },
+  viewBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 12,
+  },
+  width12: {width: 12},
+  txtAlert: {
+    fontSize: 14,
+    fontFamily: fonts.PoppinsBold,
+    color: colors.black,
+  },
+
+  txtAreYouSure: {
+    fontSize: 14,
+    fontFamily: fonts.PoppinsRegular,
+    color: colors.black,
+    textAlign: 'center',
+  },
+  viewLine: {
+    height: 2,
+    backgroundColor: colors.lightGray,
+    width: 70,
   },
 });

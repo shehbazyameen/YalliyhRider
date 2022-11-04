@@ -127,14 +127,19 @@ const MyVehicles = ({navigation}) => {
             <View style={[styling.marginTop]} />
             <View style={[styling.marginTop]} />
             <View style={styling.textSignup}>
-              <Buton title={labels.editDetails} onPress={toggleModal} />
+              <Buton
+                title={labels.editDetails}
+                onPress={() => {
+                  navigation.navigate('EditVehicles');
+                }}
+              />
               <View style={styling.width12} />
               <Buton
                 backgroundColor={colors.colorWhite}
                 title={labels.deleteVehicle}
                 color={colors.black}
                 borderWidth={1}
-                // onPress={onPressCancel}
+                onPress={toggleModal}
               />
             </View>
           </ScrollView>
