@@ -11,7 +11,6 @@ export default StyleSheet.create({
     position: 'absolute',
     left: 12,
     top: 18,
-
     zIndex: 11111,
   },
   mainContainer: {

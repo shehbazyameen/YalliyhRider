@@ -30,4 +30,51 @@ export default StyleSheet.create({
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
   },
+
+  textOffline: {
+    fontSize: 18,
+    fontFamily: fonts.PoppinsRegular,
+    color: colors.black,
+    fontWeight: 'bold',
+  },
+
+  ///Modal styling
+  viewFlex: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingHorizontal: 22,
+  },
+
+  marginTop: {marginTop: 16},
+  marginTop4: {marginTop: 4},
+  viewLine: {
+    height: 2,
+    backgroundColor: colors.lightGray,
+    width: 70,
+  },
+  view1: {
+    backgroundColor: colors.colorWhite,
+    padding: 22,
+    marginTop: 16,
+    borderTopLeftRadius: 38,
+    borderTopRightRadius: 38,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  viewMain: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
+    backgroundColor: '#AFB1B340',
+    borderRadius: 68,
+  },
+  viewBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 12,
+  },
+  width12: {width: 12},
 });

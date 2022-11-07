@@ -47,4 +47,5 @@ export const labels = {
   areYouLogout: 'Are you sure you want to logout?',
   save: 'Save',
   editVehicle: 'Edit Vehicle',
+  registerVehicle: 'Register Vehicle',
 };
