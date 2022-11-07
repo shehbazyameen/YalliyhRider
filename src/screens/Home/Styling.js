@@ -2,6 +2,8 @@ import {StyleSheet} from 'react-native';
 import fonts from '../../assets/fonts';
 import {colors} from '../../config/Colors';
 
+import {vh, vw} from '../../config/Unit';
+
 export default StyleSheet.create({
   Container: {
     flex: 1,
@@ -32,7 +34,7 @@ export default StyleSheet.create({
   },
 
   textOffline: {
-    fontSize: 18,
+    fontSize: vh * 2.3,
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
     fontWeight: 'bold',
