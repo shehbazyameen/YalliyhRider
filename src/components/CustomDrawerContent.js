@@ -74,7 +74,7 @@ export default function CustomDrawerContent({props, navigation}) {
       title: 'My Earning',
       image: Assets.cash,
       onPress: () => {
-        // navigation.navigate();
+        navigation.navigate('MyEarning');
       },
     },
     {

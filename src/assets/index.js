@@ -40,7 +40,5 @@ export const Assets = {
   colorVehicle: require('../assets/images/ios-color-filter-outline.png'),
   licenseLine: require('../assets/images/license-line.png'),
   arrowDownFill: require('../assets/images/arrow-down-fill.png'),
-
-
-  
+  restaurantLocation: require('../assets/images/restaurantLocation.png'),
 };

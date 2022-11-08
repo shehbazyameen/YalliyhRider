@@ -48,4 +48,5 @@ export const labels = {
   save: 'Save',
   editVehicle: 'Edit Vehicle',
   registerVehicle: 'Register Vehicle',
+  myEarnings:'My Earnings',
 };

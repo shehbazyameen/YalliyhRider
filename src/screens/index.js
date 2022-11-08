@@ -12,6 +12,7 @@ import EditProfile from './Profile/EditProfile';
 import MyVehicles from './MyVehicles/MyVehicles';
 import Notification from './Notification/Notification';
 import EditVehicles from './EditVehicles/EditVehicles';
+import MyEarning from './MyEarning/MyEarning';
 
 export {
   Splash,
@@ -28,4 +29,5 @@ export {
   MyVehicles,
   Notification,
   EditVehicles,
+  MyEarning,
 };
