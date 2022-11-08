@@ -5,6 +5,10 @@ import {normalize} from '../../config/FontsNormalize';
 import {vh, vw} from '../../config/Unit';
 
 export default StyleSheet.create({
+  hw32: {
+    height: 32,
+    width: 32,
+  },
   Container: {
     flex: 1,
     backgroundColor: colors.colorWhite,

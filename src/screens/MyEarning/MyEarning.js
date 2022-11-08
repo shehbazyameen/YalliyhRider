@@ -34,10 +34,7 @@ const MyEarning = ({navigation}) => {
               longitudeDelta: 0.0122,
             }}>
             <Marker coordinate={{latitude: 24.8681908, longitude: 67.0650614}}>
-              <Image
-                style={{height: 32, width: 32}}
-                source={Assets.restaurantLocation}
-              />
+              <Image style={styling.hw32} source={Assets.restaurantLocation} />
             </Marker>
           </MapView>
         </View>
