@@ -4,6 +4,7 @@ import {Assets} from '../assets';
 import fonts from '../assets/fonts';
 import {Rating} from 'react-native-ratings';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 
 const {width, height} = Dimensions.get('window');
 
@@ -69,20 +70,23 @@ const styles = StyleSheet.create({
   },
 
   textDate: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
     // marginBottom: -10,
   },
 
   textTitle: {
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(12),
     fontFamily: fonts.PoppinsBold,
     color: colors.black,
     // marginBottom: -10,
   },
   textDescription: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsRegular,
     color: colors.lightGray,
     lineHeight: 18,

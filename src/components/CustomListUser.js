@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 
 const {width, height} = Dimensions.get('window');
 
@@ -57,13 +58,14 @@ const styles = StyleSheet.create({
   },
 
   textTitle: {
-    fontSize: 28,
+    // fontSize: 28,
+    fontSize: normalize(26),
     fontFamily: fonts.DongleRegular,
     color: colors.black,
     marginBottom: -10,
   },
   textSubTitle: {
-    fontSize: 16,
+    fontSize: normalize(14),
     fontFamily: fonts.DongleRegular,
     color: colors.lightGray,
   },

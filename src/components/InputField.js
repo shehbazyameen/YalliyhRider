@@ -3,6 +3,7 @@ import {StyleSheet, Image, TouchableOpacity, View, Text} from 'react-native';
 import {colors} from '../config/Colors';
 import {Input} from '@rneui/themed';
 import fonts from '../assets/fonts';
+import {normalize} from '../config/FontsNormalize';
 
 export const InputFeild = ({
   onChange = () => {},
@@ -35,7 +36,8 @@ export const InputFeild = ({
     <View>
       <Text
         style={{
-          fontSize: 18,
+          // fontSize: 18,
+          fontSize: normalize(16),
           color: colors.textColorInputAbove,
           fontFamily: fonts.DongleRegular,
         }}>
@@ -44,7 +46,7 @@ export const InputFeild = ({
 
       <Input
         editable={disabled}
-        style={{fontSize: 11}}
+        style={{fontSize: normalize(10)}}
         accessibilityViewIsModal={true}
         blurOnSubmit={false}
         placeholderTextColor={placeholderTextColor}
@@ -127,7 +129,8 @@ export const InputFeild = ({
 const styles = StyleSheet.create({
   textInput: {
     fontFamily: fonts.PoppinsLight,
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(12),
   },
   inputFeildStyle: {
     alignItems: 'center',

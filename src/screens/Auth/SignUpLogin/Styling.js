@@ -1,6 +1,7 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import fonts from '../../../assets/fonts';
 import {colors} from '../../../config/Colors';
+import {normalize} from '../../../config/FontsNormalize';
 
 const {height, width} = Dimensions.get('window');
 
@@ -50,12 +51,14 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   textAlready: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.lightGray,
   },
   textAlreadyLogin: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorLogin,
     textDecorationLine: 'underline',
@@ -70,7 +73,8 @@ export default StyleSheet.create({
     padding: 22,
   },
   textForgotPassword: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.lightGray,
     textDecorationLine: 'underline',

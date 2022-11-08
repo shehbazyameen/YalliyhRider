@@ -1,6 +1,7 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import fonts from '../../../assets/fonts';
 import {colors} from '../../../config/Colors';
+import {normalize} from '../../../config/FontsNormalize';
 
 const {height, width} = Dimensions.get('window');
 
@@ -35,14 +36,16 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   textPasswordRecovery: {
-    fontSize: 40,
+    // fontSize: 40,
+    fontSize: normalize(38),
     fontFamily: fonts.DongleBold,
     color: colors.textColorLogin,
   },
 
   //
   textBackToLogin: {
-    fontSize: 24,
+    // fontSize: 24,
+    fontSize: normalize(22),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorLogin,
     textDecorationLine: 'underline',
@@ -57,7 +60,8 @@ export default StyleSheet.create({
     paddingHorizontal: 45,
   },
   textVerificationCode: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorInputAbove,
     marginVertical: 12,
@@ -67,7 +71,8 @@ export default StyleSheet.create({
     marginTop: 16,
   },
   textInputField: {
-    fontSize: 20,
+    // fontSize: 20,
+    fontSize: normalize(18),
     fontFamily: fonts.PoppinsBold,
     color: '#374550',
     textAlign: 'center',
@@ -78,7 +83,8 @@ export default StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 20,
-    fontSize: 15,
+    // fontSize: 15,
+    fontSize: normalize(14),
     fontFamily: fonts.PoppinsBold,
     backgroundColor: '#F4F5FA',
     overflow: 'hidden',
@@ -106,12 +112,14 @@ export default StyleSheet.create({
     color: 'white',
   },
   textResend: {
-    fontSize: 20,
+    // fontSize: 20,
+    fontSize: normalize(18),
     fontFamily: fonts.DongleRegular,
     color: colors.timerColor,
   },
   didReceived: {
-    fontSize: 20,
+    // fontSize: 20,
+    fontSize: normalize(18),
     fontFamily: fonts.DongleRegular,
     color: colors.primaryColor85,
   },

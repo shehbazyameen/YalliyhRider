@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../../assets/fonts';
 import {colors} from '../../config/Colors';
+import {normalize} from '../../config/FontsNormalize';
 
 export default StyleSheet.create({
-  padding12:{paddingTop: 12},
+  padding12: {paddingTop: 12},
   view1: {
     padding: 32,
     flex: 1,
@@ -24,12 +25,14 @@ export default StyleSheet.create({
 
   //Modal
   textPercentage: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(10),
     fontFamily: fonts.PoppinsBold,
     color: colors.grayLight,
   },
   textView: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(10),
     fontFamily: fonts.PoppinsLight,
     color: colors.grayLight,
     textAlign: 'center',
@@ -37,13 +40,15 @@ export default StyleSheet.create({
   },
 
   textTime: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsBold,
     color: colors.black,
     // marginBottom: -10,
   },
   textHours: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(10),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
   },
@@ -56,7 +61,8 @@ export default StyleSheet.create({
   },
   marginTop: {marginTop: 16},
   textPasswordRecovery: {
-    fontSize: 40,
+    // fontSize: 40,
+    fontSize: normalize(38),
     fontFamily: fonts.DongleBold,
     color: colors.textColorLogin,
     textAlign: 'center',

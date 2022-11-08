@@ -1,8 +1,7 @@
 import {StyleSheet} from 'react-native';
 import fonts from '../../assets/fonts';
 import {colors} from '../../config/Colors';
-
-import {vh, vw} from '../../config/Unit';
+import {normalize} from '../../config/FontsNormalize';
 
 export default StyleSheet.create({
   Container: {
@@ -14,7 +13,8 @@ export default StyleSheet.create({
 
   //Modal
   textTitle: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsLight,
     color: colors.lightGray,
     // marginBottom: -10,
@@ -22,19 +22,21 @@ export default StyleSheet.create({
   },
 
   textTime: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsLight,
     color: colors.lightGray,
     // marginBottom: -10,
   },
   textHours: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(10),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
   },
 
   textOffline: {
-    fontSize: vh * 2.3,
+    fontSize: normalize(14),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
     fontWeight: 'bold',

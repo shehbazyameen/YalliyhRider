@@ -1,6 +1,7 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import fonts from '../../assets/fonts';
 import {colors} from '../../config/Colors';
+import {normalize} from '../../config/FontsNormalize';
 
 const {height, width} = Dimensions.get('window');
 
@@ -52,12 +53,12 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   textAlready: {
-    fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.lightGray,
   },
   textAlreadyLogin: {
-    fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorLogin,
     textDecorationLine: 'underline',
@@ -72,19 +73,21 @@ export default StyleSheet.create({
     padding: 4,
   },
   textForgotPassword: {
-    fontSize: 18,
+    fontSize: normalize(16),
     fontFamily: fonts.DongleRegular,
     color: colors.lightGray,
     textDecorationLine: 'underline',
   },
   textBackToLogin: {
-    fontSize: 24,
+    // fontSize: 24,
+    fontSize: normalize(22),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorLogin,
     textDecorationLine: 'underline',
   },
   textPasswordRecovery: {
-    fontSize: 40,
+    // fontSize: 40,
+    fontSize: normalize(38),
     fontFamily: fonts.DongleBold,
     color: colors.textColorLogin,
   },
@@ -111,6 +114,7 @@ export default StyleSheet.create({
   },
   textInput: {
     fontFamily: fonts.PoppinsLight,
-    fontSize: 11,
+    // fontSize: 11,
+    fontSize: normalize(9),
   },
 });

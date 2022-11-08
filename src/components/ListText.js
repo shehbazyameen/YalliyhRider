@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, StyleSheet, Dimensions, TouchableOpacity} from 'react-native';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 
 const {width, height} = Dimensions.get('window');
 
@@ -40,13 +41,15 @@ const styles = StyleSheet.create({
   },
 
   textTitle: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsLight,
     color: colors.lightGray,
     // marginBottom: -10,
   },
   textSubTitle: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(10),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
   },

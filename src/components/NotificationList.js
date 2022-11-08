@@ -10,6 +10,7 @@ import {
 import {Assets} from '../assets';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 import Buton from './Buton';
 
 const {width, height} = Dimensions.get('window');
@@ -95,12 +96,14 @@ const styles = StyleSheet.create({
   },
 
   textTitle: {
-    fontSize: 10,
+    // fontSize: 10,
     fontFamily: fonts.PoppinsRegular,
     color: colors.lightGray,
+    fontSize: normalize(9),
   },
   textSubTitle: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsBold,
     color: colors.black,
   },

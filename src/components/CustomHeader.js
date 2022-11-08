@@ -11,6 +11,7 @@ import {
 import {Header} from '@rneui/base';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 const {width, height} = Dimensions.get('window');
 
 const CustomHeader = ({
@@ -86,7 +87,8 @@ const styles = StyleSheet.create({
   centerText: {
     fontFamily: fonts.DongleBold,
     color: colors.colorWhite,
-    fontSize: 26,
+    // fontSize: 26,
+    fontSize: normalize(24),
     height: 26,
   },
   imageHW: {height: 20, width: 20},

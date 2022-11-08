@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import {Assets} from '../assets';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 import {labels} from '../config/Labels';
 import Buton from './Buton';
 import CustomListUser from './CustomListUser';
@@ -176,7 +177,8 @@ const styling = StyleSheet.create({
 
   //Modal
   textTitle: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsLight,
     color: colors.lightGray,
     // marginBottom: -10,
@@ -184,13 +186,15 @@ const styling = StyleSheet.create({
   },
 
   textTime: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     fontFamily: fonts.PoppinsLight,
     color: colors.lightGray,
     // marginBottom: -10,
   },
   textHours: {
-    fontSize: 12,
+    // fontSize: 12,
+    fontSize: normalize(10),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
   },

@@ -1,18 +1,21 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import fonts from '../../assets/fonts';
 import {colors} from '../../config/Colors';
+import {normalize} from '../../config/FontsNormalize';
 
 const {height, width} = Dimensions.get('window');
 
 export default StyleSheet.create({
   txtAlert: {
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(12),
     fontFamily: fonts.PoppinsBold,
     color: colors.black,
   },
 
   txtAreYouSure: {
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(12),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
     textAlign: 'center',
@@ -70,12 +73,14 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   textAlready: {
-    fontSize: 18,
+    // fontSize: 1,
+    fontSize: normalize(14),
     fontFamily: fonts.DongleRegular,
     color: colors.lightGray,
   },
   textAlreadyLogin: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: normalize(14),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorLogin,
     textDecorationLine: 'underline',
@@ -87,7 +92,8 @@ export default StyleSheet.create({
   },
 
   textForgotPassword: {
-    fontSize: 24,
+    // fontSize: 24,
+    fontSize: normalize(22),
     fontFamily: fonts.DongleRegular,
     color: colors.black,
     textDecorationLine: 'underline',
@@ -95,13 +101,15 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   textBackToLogin: {
-    fontSize: 24,
+    // fontSize: 24,
+    fontSize: normalize(22),
     fontFamily: fonts.DongleRegular,
     color: colors.textColorLogin,
     textDecorationLine: 'underline',
   },
   textPasswordRecovery: {
-    fontSize: 40,
+    // fontSize: 40,
+    fontSize: normalize(38),
     fontFamily: fonts.DongleBold,
     color: colors.textColorLogin,
   },
@@ -128,15 +136,18 @@ export default StyleSheet.create({
   },
   textInput: {
     fontFamily: fonts.PoppinsLight,
-    fontSize: 11,
+    // fontSize: 11,
+    fontSize: normalize(9),
   },
   textName: {
-    fontSize: 20,
+    // fontSize: 20,
+    fontSize: normalize(18),
     color: colors.textColorInputAbove,
     fontFamily: fonts.DongleRegular,
   },
   textPlaceHolderEdit: {
-    fontSize: 10,
+    // fontSize: 10,
+    fontSize: normalize(9),
     color: colors.placeHolderTextColor,
     fontFamily: fonts.PoppinsLight,
     marginTop: 4,
@@ -204,5 +215,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 12,
   },
-  width12: {width: 12},
+  width12: {
+    width: 12,
+  },
 });

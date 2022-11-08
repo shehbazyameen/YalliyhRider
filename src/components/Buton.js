@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import fonts from '../assets/fonts';
 import {colors} from '../config/Colors';
+import {normalize} from '../config/FontsNormalize';
 const Buton = ({
   onPress = () => {},
   title = '',
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: fonts.PoppinsRegular,
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(13),
     color: colors.colorWhite,
   },
 });

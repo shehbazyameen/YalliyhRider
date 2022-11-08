@@ -14,6 +14,7 @@ import fonts from '../assets/fonts';
 import Buton from './Buton';
 import CustomModal from './CustomModal';
 import {labels} from '../config/Labels';
+import {normalize} from '../config/FontsNormalize';
 
 const {width, height} = Dimensions.get('window');
 
@@ -197,13 +198,15 @@ const styles = StyleSheet.create({
   },
   txtTouch: {
     fontFamily: fonts.PoppinsRegular,
-    fontSize: 16,
+    // fontSize: 16,
+    fontSize: normalize(14),
     color: colors.colorWhite,
     paddingHorizontal: 12,
   },
   profileTitle: {
     fontFamily: fonts.PoppinsBold,
-    fontSize: 20,
+    // fontSize: 20,
+    fontSize: normalize(18),
     color: colors.colorWhite,
     paddingTop: 12,
   },
@@ -243,13 +246,15 @@ const styles = StyleSheet.create({
   },
   width12: {width: 12},
   txtAlert: {
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(12),
     fontFamily: fonts.PoppinsBold,
     color: colors.black,
   },
 
   txtAreYouSure: {
-    fontSize: 14,
+    // fontSize: 14,
+    fontSize: normalize(12),
     fontFamily: fonts.PoppinsRegular,
     color: colors.black,
     textAlign: 'center',

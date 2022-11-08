@@ -46,7 +46,8 @@ const EditVehicles = ({navigation}) => {
         <ScrollView showsVerticalScrollIndicator={false}>
           <Text
             style={{
-              fontSize: 18,
+              // fontSize: 18,
+              fontSize: normalize(16),
               color: colors.textColorInputAbove,
               fontFamily: fonts.DongleRegular,
             }}>
@@ -67,7 +68,8 @@ const EditVehicles = ({navigation}) => {
               placeholder="Select"
               placeholderStyle={{
                 color: colors.placeHolderTextColor,
-                fontSize: 12,
+                // fontSize: 12,
+                fontSize: normalize(10),
               }}
               open={open}
               value={value}
@@ -86,7 +88,8 @@ const EditVehicles = ({navigation}) => {
               }}
               textStyle={{
                 fontFamily: fonts.PoppinsLight,
-                fontSize: 12,
+                // fontSize: 12,
+                fontSize: normalize(14),
                 color: colors.placeHolderTextColor,
                 paddingHorizontal: 26,
               }}
