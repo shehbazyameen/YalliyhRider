@@ -49,7 +49,11 @@ const MyEarning = ({navigation}) => {
             A-15,block 2,Street XYZ A-15,block 2,Street XYZ A-15,block 2,Street
             XYZ
           </Text>
-          <TouchableOpacity activeOpacity={0.7}>
+          <TouchableOpacity
+            activeOpacity={0.7}
+            onPress={() => {
+              navigation.navigate('MyEarningDetails');
+            }}>
             <Text style={[styling.textViewDetails]}>View Details</Text>
           </TouchableOpacity>
         </View>

@@ -49,4 +49,7 @@ export const labels = {
   editVehicle: 'Edit Vehicle',
   registerVehicle: 'Register Vehicle',
   myEarnings:'My Earnings',
+  details:'Details',
+
+
 };
