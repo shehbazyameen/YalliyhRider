@@ -6,6 +6,28 @@ import {normalize} from '../../config/FontsNormalize';
 const {height, width} = Dimensions.get('window');
 
 export default StyleSheet.create({
+  hw80: {
+    height: 80,
+    width: 80,
+  },
+  txtAddImage: {
+    fontSize: normalize(16),
+    color: colors.lightGray,
+    fontFamily: fonts.DongleRegular,
+    position: 'absolute',
+    zIndex: 1111,
+  },
+  touchImageAdd: {
+    height: 80,
+    width: 80,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  txtTitle: {
+    fontSize: normalize(16),
+    color: colors.textColorInputAbove,
+    fontFamily: fonts.DongleRegular,
+  },
   textVehicleType: {
     // fontSize: 18,
     fontSize: normalize(16),

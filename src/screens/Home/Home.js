@@ -91,7 +91,9 @@ const Home = ({navigation}) => {
           <View style={[styling.marginTop]} />
           <Buton
             title={labels.registerVehicle}
-            // onPress={toggleModal}
+            onPress={() => {
+              navigation.navigate('RegisterVehicle');
+            }}
           />
         </View>
       </View>

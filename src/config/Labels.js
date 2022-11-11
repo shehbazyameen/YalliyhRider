@@ -48,8 +48,16 @@ export const labels = {
   save: 'Save',
   editVehicle: 'Edit Vehicle',
   registerVehicle: 'Register Vehicle',
-  myEarnings:'My Earnings',
-  details:'Details',
-
-
+  myEarnings: 'My Earnings',
+  details: 'Details',
+  vehicleType: 'Vehicle Type',
+  licensePlateImage: 'License Plate Image',
+  select: 'Select',
+  carVehicleImage: 'Car Vehicle Image',
+  brandName: 'Brand Name',
+  enter: 'Enter',
+  vehicleName: 'Vehicle Name',
+  vehicleColor: 'Vehicle Color',
+  licensePlateNumber: 'License Plate Number',
+  addImage: 'Add Image',
 };

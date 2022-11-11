@@ -13,7 +13,6 @@ export const InputFeild = ({
   value = '',
   placeholder = '',
   secure = false,
-  editable = true,
   returnKeyType = '',
   refValueCurrent,
   valueRef,

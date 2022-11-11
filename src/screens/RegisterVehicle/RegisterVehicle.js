@@ -11,20 +11,135 @@ import {colors} from '../../config/Colors';
 import DropDownPicker from 'react-native-dropdown-picker';
 import fonts from '../../assets/fonts';
 import {normalize} from '../../config/FontsNormalize';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
+import {Alert} from 'react-native';
 
-const EditVehicles = ({navigation}) => {
+const RegisterVehicle = ({navigation}) => {
   const [brandName, setbrandName] = useState('');
   const [vehicleName, setvehicleName] = useState('');
   const [vehicleColor, setvehicleColor] = useState('');
   const [licensePlateNumber, setlicensePlateNumber] = useState('');
+  const [LicensePlateImage, setLicensePlateImage] = useState('');
+  const [CarVehicleImage, setCarVehicleImage] = useState([]);
 
   ///
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
-    {label: 'SPORTS CAR', value: 'SPORTS CAR'},
-    {label: 'STATION WAGON', value: 'STATION WAGON'},
+    {label: 'Mini', value: 'Mini'},
+    {label: 'Mini Plus', value: 'Mini Plus'},
+    {label: 'Business', value: 'Business'},
   ]);
+  //
+
+  const ShowMessage = type => {
+    Alert.alert('Upload image', 'Choose a option', [
+      {
+        text: 'Close',
+        onPress: () => {},
+      },
+      {
+        text: 'Camera',
+        onPress: () => LaunchCamera(type),
+      },
+      {
+        text: 'Gallery',
+        onPress: () => ChoosePhoto(type),
+      },
+    ]);
+  };
+
+  const LaunchCamera = type => {
+    // alert(type);
+    let options = {
+      storageOptions: {
+        mediaType: 'photo',
+        includeBase64: false,
+        maxHeight: 200,
+        maxWidth: 200,
+      },
+    };
+    launchCamera(options, response => {
+      console.log('Response =============> ', response);
+      if (response.didCancel) {
+        // setLoader(false);
+        console.log('ImagePicker Error: ', response.error);
+      } else if (response.error) {
+        // setLoader(false);
+        console.log('ImagePicker Error: ', response.error);
+      } else {
+        console.log(response.assets[0]);
+        // setAvatar(response.assets[0].uri);
+        const formData = new FormData();
+        formData.append('avatar', {
+          uri: response.assets[0].uri,
+          type: 'image/png',
+          name: 'photo',
+        });
+        // api to get url
+        // dispatch(
+        //   ImageUrlAction(
+        //     formData,
+        //     sucess => {
+        //       setLoader(false);
+        //       setAvatar(sucess);
+        //       setAvatarEdit(sucess);
+        //     },
+        //     () => {
+        //       setLoader(false);
+        //     },
+        //   ),
+        // );
+      }
+    });
+  };
+
+  //choosePhoto
+  const ChoosePhoto = type => {
+    // alert(type);
+    // setLoader(true);
+    const options = {
+      mediaType: 'photo',
+      maxWidth: 550,
+      maxHeight: 550,
+      quality: 0.8,
+      includeBase64: true,
+    };
+    launchImageLibrary(options, response => {
+      console.log('Response =============> ', response);
+      if (response.didCancel) {
+        // setLoader(false);
+        console.log('ImagePicker Error: ', response.error);
+      } else if (response.error) {
+        // setLoader(false);
+        console.log('ImagePicker Error: ', response.error);
+      } else {
+        console.log(response.assets[0]);
+        // setAvatar(response.assets[0].uri);
+        const formData = new FormData();
+        formData.append('avatar', {
+          uri: response.assets[0].uri,
+          type: 'image/png',
+          name: 'photo',
+        });
+        // api to get url
+        // dispatch(
+        //   ImageUrlAction(
+        //     formData,
+        //     sucess => {
+        //       setLoader(false);
+        //       setAvatar(sucess);
+        //       setAvatarEdit(sucess);
+        //     },
+        //     () => {
+        //       setLoader(false);
+        //     },
+        //   ),
+        // );
+      }
+    });
+  };
 
   return (
     <View style={styling.mainContainer}>
@@ -36,12 +151,10 @@ const EditVehicles = ({navigation}) => {
         leftRoute={() => {
           navigation.goBack();
         }}
-        centerTitle={labels.editVehicle}
-        // rightIcon1={Assets.bell}
+        centerTitle={labels.registerVehicle}
         rightIcon1Onpress={() => {}}
       />
       <View style={styling.viewBorder} />
-
       <View style={[styling.paddingHorizontal45]}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Text style={styling.textVehicleType}>
@@ -62,7 +175,6 @@ const EditVehicles = ({navigation}) => {
               placeholder={labels.select}
               placeholderStyle={{
                 color: colors.placeHolderTextColor,
-
                 fontSize: normalize(10),
               }}
               open={open}
@@ -81,8 +193,7 @@ const EditVehicles = ({navigation}) => {
               }}
               textStyle={{
                 fontFamily: fonts.PoppinsLight,
-
-                fontSize: normalize(14),
+                fontSize: normalize(12),
                 color: colors.placeHolderTextColor,
                 paddingHorizontal: 26,
               }}
@@ -150,6 +261,44 @@ const EditVehicles = ({navigation}) => {
           />
 
           <View style={[styling.marginTop]} />
+          <Text style={styling.txtTitle}>
+            {labels.licensePlateImage + labels.staric}
+          </Text>
+
+          <TouchableOpacity
+            onPress={() => {
+              ShowMessage('LicensePlateImage');
+            }}
+            activeOpacity={0.7}
+            style={styling.touchImageAdd}>
+            <Text style={styling.txtAddImage}>{labels.addImage}</Text>
+            <Image
+              style={styling.hw80}
+              source={Assets.dummyImageSquare}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+
+          <View style={[styling.marginTop]} />
+          <Text style={styling.txtTitle}>
+            {labels.carVehicleImage + labels.staric}
+          </Text>
+
+          <TouchableOpacity
+            onPress={() => {
+              ShowMessage('CarVehicleImage');
+            }}
+            activeOpacity={0.7}
+            style={styling.touchImageAdd}>
+            <Text style={styling.txtAddImage}>{labels.addImage}</Text>
+            <Image
+              style={styling.hw80}
+              source={Assets.dummyImageSquare}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
+
+          <View style={[styling.marginTop]} />
           <View style={[styling.marginTop]} />
           <View style={styling.textSignup}>
             <Buton
@@ -159,10 +308,11 @@ const EditVehicles = ({navigation}) => {
               }}
             />
           </View>
+          <View style={[styling.marginTop]} />
         </ScrollView>
       </View>
     </View>
   );
 };
 
-export default EditVehicles;
+export default RegisterVehicle;
