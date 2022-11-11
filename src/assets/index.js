@@ -41,4 +41,5 @@ export const Assets = {
   licenseLine: require('../assets/images/license-line.png'),
   arrowDownFill: require('../assets/images/arrow-down-fill.png'),
   restaurantLocation: require('../assets/images/restaurantLocation.png'),
+  registerVehicle: require('../assets/images/registerVehicale.jpg'),
 };

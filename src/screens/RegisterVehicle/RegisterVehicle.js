@@ -14,6 +14,7 @@ import {normalize} from '../../config/FontsNormalize';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import {Alert} from 'react-native';
+import CustomModal from '../../components/CustomModal';
 
 const RegisterVehicle = ({navigation}) => {
   const [brandName, setbrandName] = useState('');
@@ -22,7 +23,6 @@ const RegisterVehicle = ({navigation}) => {
   const [licensePlateNumber, setlicensePlateNumber] = useState('');
   const [LicensePlateImage, setLicensePlateImage] = useState('');
   const [CarVehicleImage, setCarVehicleImage] = useState([]);
-
   ///
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -31,6 +31,11 @@ const RegisterVehicle = ({navigation}) => {
     {label: 'Mini Plus', value: 'Mini Plus'},
     {label: 'Business', value: 'Business'},
   ]);
+  const [isModalVisible, setModalVisible] = useState(false);
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
+
   //
 
   const ShowMessage = type => {
@@ -50,6 +55,7 @@ const RegisterVehicle = ({navigation}) => {
     ]);
   };
 
+  //launchCamera
   const LaunchCamera = type => {
     // alert(type);
     let options = {
@@ -139,6 +145,58 @@ const RegisterVehicle = ({navigation}) => {
         // );
       }
     });
+  };
+
+  //
+  const renderModal = () => {
+    return (
+      <>
+        {/* <View style={styling.viewMain}>
+          <View style={styling.view1}>
+            <View style={styling.viewLine} />
+            <View style={[styling.marginTop]} />
+            <View style={[styling.marginTop4]} />
+            <Image source={Assets.alert} resizeMode="contain" />
+            <View style={[styling.marginTop]} />
+            <View style={[styling.marginTop4]} />
+            <Text style={styling.txtAlert}>{'Alert'}</Text>
+            <View style={[styling.marginTop4]} />
+            <Text style={styling.txtAreYouSure}>
+              {labels.areYouDeleteVehicle}
+            </Text>
+            <View style={styling.viewBtn}>
+              <Buton
+                title={labels.yes}
+                // onPress={toggleModal}
+              />
+              <View style={styling.width12} />
+              <Buton
+                backgroundColor={colors.colorWhite}
+                title={labels.no}
+                color={colors.black}
+                borderWidth={1}
+                onPress={toggleModal}
+              />
+            </View>
+          </View>
+        </View> */}
+        <View style={styling.viewMain}>
+          <View style={styling.view1}>
+            <View style={styling.viewLine} />
+            <View style={[styling.marginTop]} />
+            <View style={[styling.marginTop]} />
+            <View style={styling.viewFlex}>
+              <Image source={Assets.registerVehicle} resizeMode="contain" />
+              <View style={[styling.marginTop]} />
+              <Text style={styling.textOffline}>
+                {labels.yourVehicleHasBeenAdded}
+              </Text>
+            </View>
+            <View style={[styling.marginTop]} />
+          </View>
+        </View>
+      </>
+    );
   };
 
   return (
@@ -301,16 +359,20 @@ const RegisterVehicle = ({navigation}) => {
           <View style={[styling.marginTop]} />
           <View style={[styling.marginTop]} />
           <View style={styling.textSignup}>
-            <Buton
-              title={labels.save}
-              onPress={() => {
-                // navigation.navigate('Verification');
-              }}
-            />
+            <Buton title={labels.save} onPress={toggleModal} />
           </View>
           <View style={[styling.marginTop]} />
         </ScrollView>
       </View>
+
+      <CustomModal
+        // backdropColor={colors.transparent}
+        Children={renderModal()}
+        isModalVisible={isModalVisible}
+        onBackdropPress={() => {
+          toggleModal();
+        }}
+      />
     </View>
   );
 };

@@ -151,4 +151,39 @@ export default StyleSheet.create({
     // fontSize: 11,
     fontSize: normalize(10),
   },
+
+  //Modal
+  view1: {
+    backgroundColor: colors.colorWhite,
+    padding: 22,
+    marginTop: 16,
+    borderTopLeftRadius: 38,
+    borderTopRightRadius: 38,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  viewMain: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
+    backgroundColor: '#AFB1B340',
+    borderRadius: 68,
+  },
+  textOffline: {
+    fontSize: normalize(14),
+    fontFamily: fonts.PoppinsRegular,
+    color: colors.black,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  viewLine: {
+    height: 2,
+    backgroundColor: colors.lightGray,
+    width: 70,
+  },
+  viewFlex: {
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 22,
+  },
 });

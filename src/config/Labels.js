@@ -60,4 +60,5 @@ export const labels = {
   vehicleColor: 'Vehicle Color',
   licensePlateNumber: 'License Plate Number',
   addImage: 'Add Image',
+  yourVehicleHasBeenAdded: 'Your Vehicle Has\nBeen Added.',
 };
