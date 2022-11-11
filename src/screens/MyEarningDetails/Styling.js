@@ -1,8 +1,10 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import fonts from '../../assets/fonts';
 import {colors} from '../../config/Colors';
 import {normalize} from '../../config/FontsNormalize';
 import {vh, vw} from '../../config/Unit';
+
+const {width, height} = Dimensions.get('window');
 
 export default StyleSheet.create({
   viewJobsDetails: {
