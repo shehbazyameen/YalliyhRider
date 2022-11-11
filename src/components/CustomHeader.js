@@ -71,11 +71,11 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         marginTop: 0,
-        height: width / 3.5,
+        height: 100,
       },
       android: {
         marginTop: 0,
-        height: width / 3.5,
+        height: 100,
       },
     }),
   },

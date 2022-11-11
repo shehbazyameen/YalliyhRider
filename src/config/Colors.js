@@ -12,8 +12,8 @@ export const colors = {
   timerColor: '#CCCCCC',
   modalBackGround: '#999C9E',
   transparent: 'transparent',
-
   placeHolderTextColor: '#999999',
+  lineColor: '#AFB1B340',
 
   ///
 };

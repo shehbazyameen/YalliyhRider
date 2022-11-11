@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
 
   textTitle: {
     // fontSize: 28,
-    fontSize: normalize(26),
+    fontSize: normalize(22),
     fontFamily: fonts.DongleRegular,
     color: colors.black,
     marginBottom: -10,

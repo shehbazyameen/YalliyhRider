@@ -11,12 +11,16 @@ const ListText = ({
   title,
   subTitle,
   height = width / 6,
+  paddingHorizontal = 12,
 }) => {
   return (
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={0.7}
-      style={[styles.centerView, {height: height}]}>
+      style={[
+        styles.centerView,
+        {height: height, paddingHorizontal: paddingHorizontal},
+      ]}>
       <Text style={styles.textTitle} numberOfLines={1}>
         {title}
       </Text>
@@ -33,7 +37,6 @@ const styles = StyleSheet.create({
   centerView: {
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 12,
   },
   hW: {
     height: 32,

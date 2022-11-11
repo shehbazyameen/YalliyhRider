@@ -6212,10 +6212,10 @@
     "css-select" "^5.1.0"
     "css-tree" "^1.1.3"
 
-"react-native-swipe-up-down@^1.2.0":
-  "integrity" "sha512-pZa/EF3f85A/29thoLuVHHCNJO3GLN+zvuveW34qUgfJIvvx1Fh5dKMZlD2cHbOhhEvZaWds6MdrMQsoaTBRvw=="
-  "resolved" "https://registry.npmjs.org/react-native-swipe-up-down/-/react-native-swipe-up-down-1.2.0.tgz"
-  "version" "1.2.0"
+"react-native-swipe-up-panel@^1.2.22":
+  "integrity" "sha512-LO1mAMjilaH6cOrtatohkr5G8ED1tW9tt/nKkFJGZULu5IqbVI1HCOiixeb3HTgAsqzs/qbpz8GFiddq6Wt0gQ=="
+  "resolved" "https://registry.npmjs.org/react-native-swipe-up-panel/-/react-native-swipe-up-panel-1.2.22.tgz"
+  "version" "1.2.22"
 
 "react-native-vector-icons@>7.0.0":
   "integrity" "sha512-wKYLaFuQST/chH3AJRjmOLoLy3JEs1JR6zMNgTaemFpNoXs0ztRnTxcxFD9xhX7cJe1/zoN5BpQYe7kL0m5yyA=="
@@ -6225,7 +6225,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@>= 0.64.3", "react-native@>=0.41.2", "react-native@>=0.64.0", "react-native@>=0.65.0", "react-native@0.70.3":
+"react-native@*", "react-native@^0.68.0", "react-native@>= 0.64.3", "react-native@>=0.64.0", "react-native@>=0.65.0", "react-native@0.70.3":
   "integrity" "sha512-EiJxOonyvpSWa3Eik7a6YAD6QU8lK2W9M/DDdYlpWmIlGLCd5110rIpEZjxttsyrohxlRJAYRgJ9Tx2mMXqtfw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.70.3.tgz"
   "version" "0.70.3"
@@ -6285,7 +6285,7 @@
     "react-shallow-renderer" "^16.15.0"
     "scheduler" "^0.22.0"
 
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.1.0", "react@>= 17.0.1", "react@>=16.4.0", "react@>=17.0.0", "react@18.1.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.2", "react@^18.1.0", "react@>= 17.0.1", "react@>=16.4.0", "react@>=17.0.0", "react@18.1.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
