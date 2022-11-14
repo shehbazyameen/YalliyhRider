@@ -15,6 +15,9 @@ export const colors = {
   placeHolderTextColor: '#999999',
   lineColor: '#AFB1B340',
   textChat: '#6A6A6A',
+  textNoRider: '#333333',
+
+  
 
   ///
 };

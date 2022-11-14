@@ -42,4 +42,5 @@ export const Assets = {
   arrowDownFill: require('../assets/images/arrow-down-fill.png'),
   restaurantLocation: require('../assets/images/restaurantLocation.png'),
   registerVehicle: require('../assets/images/registerVehicale.jpg'),
+  tripBack: require('../assets/images/tripback.jpg'),
 };

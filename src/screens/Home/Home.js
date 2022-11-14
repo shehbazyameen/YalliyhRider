@@ -90,7 +90,7 @@ const Home = ({navigation}) => {
             <TouchableOpacity
               activeOpacity={0.7}
               onPress={() => {
-                alert('hi');
+                navigation.navigate('Trip');
               }}>
               <Image source={Assets.offline} resizeMode="contain" />
             </TouchableOpacity>

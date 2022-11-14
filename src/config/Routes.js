@@ -22,6 +22,7 @@ import {
   MyEarningDetails,
   RegisterVehicle,
   Chat,
+  Trip,
 } from '../screens';
 
 const AuthStack = createNativeStackNavigator();
@@ -96,6 +97,12 @@ const HomeStack = ({props}) => {
         options={{headerShown: false}}
         name="Chat"
         component={Chat}
+      />
+
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="Trip"
+        component={Trip}
       />
     </AppStack.Navigator>
   );
