@@ -21,6 +21,7 @@ import {
   MyEarning,
   MyEarningDetails,
   RegisterVehicle,
+  Chat,
 } from '../screens';
 
 const AuthStack = createNativeStackNavigator();
@@ -56,13 +57,11 @@ const HomeStack = ({props}) => {
         name="Profile"
         component={Profile}
       />
-
       <AppStack.Screen
         options={{headerShown: false}}
         name="EditProfile"
         component={EditProfile}
       />
-
       <AppStack.Screen
         options={{headerShown: false}}
         name="MyVehicles"
@@ -73,19 +72,16 @@ const HomeStack = ({props}) => {
         name="Notification"
         component={Notification}
       />
-
       <AppStack.Screen
         options={{headerShown: false}}
         name="EditVehicles"
         component={EditVehicles}
       />
-
       <AppStack.Screen
         options={{headerShown: false}}
         name="MyEarning"
         component={MyEarning}
       />
-
       <AppStack.Screen
         options={{headerShown: false}}
         name="MyEarningDetails"
@@ -95,6 +91,11 @@ const HomeStack = ({props}) => {
         options={{headerShown: false}}
         name="RegisterVehicle"
         component={RegisterVehicle}
+      />
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="Chat"
+        component={Chat}
       />
     </AppStack.Navigator>
   );

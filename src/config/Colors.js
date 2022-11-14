@@ -14,6 +14,7 @@ export const colors = {
   transparent: 'transparent',
   placeHolderTextColor: '#999999',
   lineColor: '#AFB1B340',
+  textChat: '#6A6A6A',
 
   ///
 };

@@ -15,6 +15,7 @@ import EditVehicles from './EditVehicles/EditVehicles';
 import MyEarning from './MyEarning/MyEarning';
 import MyEarningDetails from './MyEarningDetails/MyEarningDetails';
 import RegisterVehicle from './RegisterVehicle/RegisterVehicle';
+import Chat from './Chat/Chat';
 
 export {
   Splash,
@@ -34,4 +35,5 @@ export {
   MyEarning,
   MyEarningDetails,
   RegisterVehicle,
+  Chat,
 };

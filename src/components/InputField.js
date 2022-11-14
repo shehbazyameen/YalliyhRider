@@ -30,6 +30,7 @@ export const InputFeild = ({
   paddingHorizontalRight = 0,
   textLabels = textLabels,
   onFocusBorderColor = false,
+  hwRightIcon = 12,
 }) => {
   return (
     <View>
@@ -73,8 +74,8 @@ export const InputFeild = ({
             <Image
               style={{
                 paddingHorizontal: paddingHorizontalRight,
-                height: 12,
-                width: 12,
+                height: hwRightIcon,
+                width: hwRightIcon,
               }}
               source={rightIcon}
               resizeMode={'contain'}
