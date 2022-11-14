@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Image, Dimensions, Text} from 'react-native';
+import {View, Image, Dimensions, Text, TouchableOpacity} from 'react-native';
 import styling from './Styling';
 import CustomHeader from '../../components/CustomHeader';
 import {Assets} from '../../assets';
@@ -87,7 +87,13 @@ const Home = ({navigation}) => {
 
           <View style={styling.viewFlex}>
             <Text style={styling.textOffline}>{'Go Online'}</Text>
-            <Image source={Assets.offline} resizeMode="contain" />
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => {
+                alert('hi');
+              }}>
+              <Image source={Assets.offline} resizeMode="contain" />
+            </TouchableOpacity>
           </View>
           <View style={[styling.marginTop]} />
           <Buton

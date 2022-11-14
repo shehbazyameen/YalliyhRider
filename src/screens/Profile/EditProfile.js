@@ -14,14 +14,61 @@ import {ScrollView} from 'react-native';
 import Buton from '../../components/Buton';
 import {labels} from '../../config/Labels';
 import CustomHeader from '../../components/CustomHeader';
+import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
 const {width, height} = Dimensions.get('window');
 
 const EditProfile = ({navigation}) => {
-  const [profile, setprofile] = useState('');
   const [fullName, setfullName] = useState('');
   const [lastName, setlastName] = useState('');
   const [phoneNumber, setphoneNumber] = useState('');
+  const [avatar, setAvatar] = useState('');
+
+  //choosePhoto
+  const ChoosePhoto = type => {
+    // alert(type);
+    // setLoader(true);
+    const options = {
+      mediaType: 'photo',
+      maxWidth: 550,
+      maxHeight: 550,
+      quality: 0.8,
+      includeBase64: true,
+    };
+    launchImageLibrary(options, response => {
+      console.log('Response =============> ', response);
+      if (response.didCancel) {
+        // setLoader(false);
+        console.log('ImagePicker Error: ', response.error);
+      } else if (response.error) {
+        // setLoader(false);
+        console.log('ImagePicker Error: ', response.error);
+      } else {
+        console.log(response.assets[0]);
+        setAvatar(response.assets[0].uri);
+        const formData = new FormData();
+        formData.append('avatar', {
+          uri: response.assets[0].uri,
+          type: 'image/png',
+          name: 'photo',
+        });
+        // api to get url
+        // dispatch(
+        //   ImageUrlAction(
+        //     formData,
+        //     sucess => {
+        //       setLoader(false);
+        //       setAvatar(sucess);
+        //       setAvatarEdit(sucess);
+        //     },
+        //     () => {
+        //       setLoader(false);
+        //     },
+        //   ),
+        // );
+      }
+    });
+  };
   return (
     <View style={styling.mainContainer}>
       <CustomHeader
@@ -48,11 +95,17 @@ const EditProfile = ({navigation}) => {
             <Image
               style={styling.imageProfile}
               resizeMode="contain"
-              source={Assets.profileDumy}
+              source={avatar ? {uri: avatar} : Assets.profileDumy}
               borderRadius={100}
             />
 
-            <TouchableOpacity style={styling.touchCamera}>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              style={styling.touchCamera}
+              onPress={() => {
+                // navigation.navigate('ChoosePhoto');
+                ChoosePhoto();
+              }}>
               <Image
                 style={styling.alignSelfCenter}
                 resizeMode="contain"

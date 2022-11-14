@@ -7,6 +7,7 @@ export default StyleSheet.create({
   padding12: {paddingTop: 12},
   view1: {
     padding: 32,
+    paddingVertical: 12,
     flex: 1,
   },
   viewRating: {
