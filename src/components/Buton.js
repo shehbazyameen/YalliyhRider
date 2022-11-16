@@ -9,6 +9,7 @@ const Buton = ({
   backgroundColor = colors.primaryOrangeColor,
   color = colors.colorWhite,
   borderWidth,
+  height = 40,
 }) => {
   return (
     <>
@@ -16,7 +17,11 @@ const Buton = ({
         activeOpacity={0.9}
         style={[
           styles.main,
-          {backgroundColor: backgroundColor, borderWidth: borderWidth},
+          {
+            backgroundColor: backgroundColor,
+            borderWidth: borderWidth,
+            height: height,
+          },
         ]}
         onPress={onPress}>
         <Text style={[styles.text, {color: color}]}>{title}</Text>
@@ -29,7 +34,6 @@ const styles = StyleSheet.create({
   main: {
     backgroundColor: colors.primaryOrangeColor,
     height: 40,
-    // width: 121,
     paddingHorizontal: 22,
     borderRadius: 8,
     alignItems: 'center',

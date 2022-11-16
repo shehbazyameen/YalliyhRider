@@ -23,6 +23,7 @@ import {
   RegisterVehicle,
   Chat,
   Trip,
+  RiderList,
 } from '../screens';
 
 const AuthStack = createNativeStackNavigator();
@@ -103,6 +104,12 @@ const HomeStack = ({props}) => {
         options={{headerShown: false}}
         name="Trip"
         component={Trip}
+      />
+
+      <AppStack.Screen
+        options={{headerShown: false}}
+        name="RiderList"
+        component={RiderList}
       />
     </AppStack.Navigator>
   );

@@ -43,4 +43,5 @@ export const Assets = {
   restaurantLocation: require('../assets/images/restaurantLocation.png'),
   registerVehicle: require('../assets/images/registerVehicale.jpg'),
   tripBack: require('../assets/images/tripback.jpg'),
+  sendJob: require('../assets/images/sendJob.png'),
 };

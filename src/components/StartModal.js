@@ -25,10 +25,22 @@ const StartModal = ({
   price,
   date,
   time,
+  btnTitleOne = '',
+  btnTitleTwo = '',
+  bottom = 0,
+  onPressLeftIcon,
+  viewHide = true,
 }) => {
   return (
     <>
-      <View style={styling.viewMain}>
+      <View style={[viewHide && styling.viewMain, {bottom: bottom}]}>
+        {!viewHide && (
+          <>
+            <View style={styling.viewLine} />
+            <View style={[styling.marginTop]} />
+          </>
+        )}
+
         <View style={styling.view1}>
           <View>
             <CustomListUser
@@ -37,13 +49,14 @@ const StartModal = ({
               subTitle={userNameNo}
               icon={Assets.chat}
               height={50}
+              onPressLeftIcon={onPressLeftIcon}
             />
             <Text style={styling.textTitle} numberOfLines={1}>
               {tripId}
             </Text>
             <View style={styling.viewFlexRow}>
               <View style={styling.view32}>
-                <Image resizeMode={'contain'} source={Assets.send} />
+                <Image resizeMode={'contain'} source={Assets.sendJob} />
                 <View style={styling.padding12}>
                   <Image resizeMode={'contain'} source={Assets.LineVerticle} />
                 </View>
@@ -101,11 +114,11 @@ const StartModal = ({
           </View>
 
           <View style={styling.viewBtn}>
-            <Buton title={labels.Login} onPress={onPressStartRide} />
+            <Buton title={btnTitleOne} onPress={onPressStartRide} />
             <View style={styling.width12} />
             <Buton
               backgroundColor={colors.colorWhite}
-              title={labels.Login}
+              title={btnTitleTwo}
               color={colors.black}
               borderWidth={1}
               onPress={onPressCancel}
@@ -120,7 +133,22 @@ const StartModal = ({
 export default StartModal;
 
 const styling = StyleSheet.create({
-  view2ListText: {position: 'absolute', top: -20},
+  marginTop: {
+    marginTop: 16,
+  },
+
+  viewLine: {
+    height: 1.2,
+    backgroundColor: colors.lightGray,
+    width: 70,
+    position: 'absolute',
+    alignSelf: 'center',
+    margin: 22,
+  },
+  view2ListText: {
+    position: 'absolute',
+    top: -20,
+  },
   viewListText: {
     paddingHorizontal: 12,
     flexDirection: 'column',
@@ -145,7 +173,7 @@ const styling = StyleSheet.create({
   viewMain: {
     position: 'absolute',
     width: '100%',
-    bottom: 0,
+    // bottom: 0,
     backgroundColor: '#AFB1B340',
     borderRadius: 68,
   },

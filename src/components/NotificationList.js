@@ -22,6 +22,7 @@ const NotificationList = ({
   dateTime,
   height = 80,
   image = Assets.bellIcon,
+  newNotification = false,
 }) => {
   return (
     <TouchableOpacity
@@ -48,14 +49,17 @@ const NotificationList = ({
               {dateTime}
             </Text>
             <View style={{width: 12}} />
-
-            <Buton
-              backgroundColor={colors.black}
-              title={'New'}
-              color={colors.colorWhite}
-              borderWidth={1}
-              onPress={onPressCancel}
-            />
+            {newNotification ? (
+              <Buton
+                backgroundColor={colors.black}
+                title={'New'}
+                color={colors.colorWhite}
+                borderWidth={1}
+                onPress={onPressCancel}
+              />
+            ) : (
+              <></>
+            )}
           </View>
         </View>
       </View>

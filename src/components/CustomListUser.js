@@ -13,7 +13,14 @@ import {normalize} from '../config/FontsNormalize';
 
 const {width, height} = Dimensions.get('window');
 
-const CustomListUser = ({image, title, subTitle, icon, height = width / 6}) => {
+const CustomListUser = ({
+  onPressLeftIcon = () => {},
+  image,
+  title,
+  subTitle,
+  icon,
+  height = width / 6,
+}) => {
   return (
     <View style={[styles.viewMain, {height: height}]}>
       <View>
@@ -32,7 +39,7 @@ const CustomListUser = ({image, title, subTitle, icon, height = width / 6}) => {
           {subTitle}
         </Text>
       </View>
-      <TouchableOpacity activeOpacity={0.7}>
+      <TouchableOpacity onPress={onPressLeftIcon} activeOpacity={0.7}>
         <Image resizeMode={'contain'} style={styles.hW} source={icon} />
       </TouchableOpacity>
     </View>

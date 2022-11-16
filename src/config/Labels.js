@@ -61,5 +61,7 @@ export const labels = {
   licensePlateNumber: 'License Plate Number',
   addImage: 'Add Image',
   yourVehicleHasBeenAdded: 'Your Vehicle Has\nBeen Added.',
-  message:'Message'
+  message: 'Message',
+  trip: 'Trip',
+  cancel: 'cancel',
 };

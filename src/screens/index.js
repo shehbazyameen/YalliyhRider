@@ -17,6 +17,7 @@ import MyEarningDetails from './MyEarningDetails/MyEarningDetails';
 import RegisterVehicle from './RegisterVehicle/RegisterVehicle';
 import Chat from './Chat/Chat';
 import Trip from './Trip/Trip';
+import RiderList from './RiderList/RiderList';
 
 export {
   Splash,
@@ -38,4 +39,5 @@ export {
   RegisterVehicle,
   Chat,
   Trip,
+  RiderList,
 };

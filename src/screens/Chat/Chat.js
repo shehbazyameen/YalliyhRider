@@ -20,7 +20,7 @@ const Chat = ({navigation}) => {
         backgroundImage={Assets.HeaderBack2}
         leftIcon={Assets.arrowLeftShort}
         leftRoute={() => {
-          navigation.openDrawer();
+          navigation.goBack();
         }}
         centerTitle={labels.youAreOnline}
       />
