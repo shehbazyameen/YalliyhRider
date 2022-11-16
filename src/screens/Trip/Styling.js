@@ -88,4 +88,52 @@ export default StyleSheet.create({
     color: colors.black,
     // lineHeight: 26,
   },
+
+  //
+  //
+  view1: {
+    backgroundColor: colors.colorWhite,
+    padding: 22,
+    marginTop: 16,
+    borderTopLeftRadius: 38,
+    borderTopRightRadius: 38,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  viewMain: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
+    backgroundColor: '#AFB1B340',
+    borderRadius: 68,
+  },
+  viewBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 12,
+  },
+  width12: {
+    width: 12,
+  },
+  marginTop: {
+    marginTop: 16,
+  },
+  marginTop4: {
+    marginTop: 4,
+  },
+  txtAlert: {
+    // fontSize: 14,
+    fontSize: normalize(12),
+    fontFamily: fonts.PoppinsBold,
+    color: colors.black,
+  },
+
+  txtAreYouSure: {
+    // fontSize: 14,
+    fontSize: normalize(12),
+    fontFamily: fonts.PoppinsRegular,
+    color: colors.black,
+    textAlign: 'center',
+  },
 });

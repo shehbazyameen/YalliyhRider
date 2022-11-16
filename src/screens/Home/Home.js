@@ -21,8 +21,8 @@ const Home = ({navigation}) => {
         centerTitle={labels.youAreOnline}
         rightIcon1={Assets.bell}
         rightIcon1Onpress={() => {
-          // navigation.navigate('Notification');
-          navigation.navigate('Chat');
+          navigation.navigate('Notification');
+          // navigation.navigate('Chat');
         }}
       />
       <View>

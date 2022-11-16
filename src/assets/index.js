@@ -44,4 +44,5 @@ export const Assets = {
   registerVehicle: require('../assets/images/registerVehicale.jpg'),
   tripBack: require('../assets/images/tripback.jpg'),
   sendJob: require('../assets/images/sendJob.png'),
+  messageModal: require('../assets/images/messageModal.jpg'),
 };
