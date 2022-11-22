@@ -1,5 +1,5 @@
 export const Assets = {
-  LogoSplash: require('../assets/images/SplashLogo.png'),
+  LogoSplash: require('../assets/images/splashLogo.png'),
   splashBackImage: require('../assets/images/splashBackImage.png'),
   imageSignup: require('../assets/images/backimageSignup.png'),
   ApplicationLogo: require('../assets/images/ApplicationLogo.png'),
